@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}Details d'evenement{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Event: {{ event.name }}</h2>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Heure:</strong> {{ event.start_time }} - {{ event.end_time }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <a href="{% url 'events:event_pdf' event.id %}" class="btn btn-secondary mt-3">Download PDF</a>
+    <a href="{% url 'assignments:bulk_allocate_materials' event.id %}" class="btn btn-secondary mt-3">Allocate Materials</a>
+    <h4 class="mt-4">Employes assigne</h4>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Employe</th>
+                <th>Role</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignments %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ assignment.employee.full_name }}</td>
+                <td>{{ assignment.assigned_role }}</td>
+                <td>
+                    {% if assignment.status == 'Active' %}
+                    <span class="badge bg-success">{{ assignment.status }}</span>
+                    {% else %}
+                    <span class="badge bg-danger">{{ assignment.status }}</span>
+                    {% endif %}
+                </td>                <td>
+                    <form method="post" action="{% url 'assignments:unassign_employee' assignment.id %}" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Liberer</button>
+                    </form>                    
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="text-center">No employees assigned to this event.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Material Allocations Section -->
+    <h3 class="mt-5">Materiel assigne</h3>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Materiel</th>
+                <th>Quantite assigne</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for allocation in material_allocations %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ allocation.material.name }}</td>
+                <td>{{ allocation.quantity_allocated }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">No materials allocated to this event.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% if messages %}
+<div class="mt-3">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

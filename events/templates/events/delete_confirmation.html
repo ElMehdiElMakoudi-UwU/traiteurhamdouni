@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmer suppression{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-danger text-center">Delete Event</h2>
+    <p class="text-center">Êtes-vous sûr de vouloir supprimer <strong>{{ object.name }}</strong> scheduled on {{ object.date }}?</p>
+    <div class="text-center mt-4">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+            <a href="{% url 'events:event_list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

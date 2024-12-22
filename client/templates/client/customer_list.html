@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer List{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Liste des clients.</h2>
+
+<!-- Search Bar -->
+<div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+        <form method="get" action="{% url 'customer_list' %}">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search customers..." value="{{ search_query }}">
+                <button type="submit" class="btn btn-primary">Rechercher</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-striped mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>
+                <a href="?sort_by=full_name&order={% if current_sort == 'full_name' and current_order == 'asc' %}desc{% else %}asc{% endif %}">
+                    Nom
+                    {% if current_sort == 'full_name' %}
+                        <span>{% if current_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                    {% endif %}
+                </a>
+            </th>
+            <th>
+                <a href="?sort_by=phone_number&order={% if current_sort == 'phone_number' and current_order == 'asc' %}desc{% else %}asc{% endif %}">
+                    Telephone
+                    {% if current_sort == 'phone_number' %}
+                        <span>{% if current_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                    {% endif %}
+                </a>
+            </th>
+            <th>
+                <a href="?sort_by=address&order={% if current_sort == 'address' and current_order == 'asc' %}desc{% else %}asc{% endif %}">
+                    Addresse
+                    {% if current_sort == 'address' %}
+                        <span>{% if current_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                    {% endif %}
+                </a>
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ customer.full_name }}</td>
+            <td>{{ customer.phone_number }}</td>
+            <td>{{ customer.address }}</td>
+            <td>
+                <a href="{% url 'edit_customer' customer.pk %}" class="btn btn-sm btn-warning">Modifier</a>
+                <a href="{% url 'delete_customer' customer.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+                <a href="{% url 'customer_detail' customer.pk %}" class="btn btn-sm btn-info">Afficher les Details</a>
+            </td>            
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">Pas de client.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="text-center mt-4">
+    <a href="{% url 'add_customer' %}" class="btn btn-primary">Ajouter nouveau client</a>
+</div>
+{% endblock %}

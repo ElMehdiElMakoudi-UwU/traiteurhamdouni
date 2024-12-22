@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Details{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Customer Details</h2>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h4>Nom: {{ customer.full_name }}</h4>
+        <p><strong>Telephone:</strong> {{ customer.phone_number }}</p>
+        <p><strong>Addresse:</strong> {{ customer.address }}</p>
+    </div>
+</div>
+
+<h3 class="mt-5">Activity Log</h3>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for log in activity_logs %}
+        <tr>
+            <td>{{ log.date }}</td>
+            <td>{{ log.action }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2" class="text-center">No activity logged.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="text-center mt-4">
+    <a href="{% url 'customer_list' %}" class="btn btn-secondary">Retour a la liste des clients</a>
+</div>
+{% endblock %}

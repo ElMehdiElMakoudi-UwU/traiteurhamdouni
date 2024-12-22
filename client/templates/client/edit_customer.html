@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifier Client{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Modifier Client</h2>
+<div class="card mt-4">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3">Mettre a jour le client</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="text-center mt-4">
+    <a href="{% url 'customer_list' %}" class="btn btn-secondary">Retour a la liste des clients</a>
+</div>
+{% endblock %}

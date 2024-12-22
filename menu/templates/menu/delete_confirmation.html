@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirmer la Suppression{% endblock %}
+
+{% block content %}
+<h2 class="text-center text-danger">Supprimer {{ type }}</h2>
+<p class="text-center">Êtes-vous sûr de vouloir supprimer <strong>{{ object }}</strong> ?</p>
+<div class="text-center mt-4">
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+        <a href="{% url redirect_url %}" class="btn btn-secondary">Annuler</a>
+    </form>
+</div>
+{% endblock %}

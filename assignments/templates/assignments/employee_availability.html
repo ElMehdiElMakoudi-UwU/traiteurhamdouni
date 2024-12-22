@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Disponibilité des Employés{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Disponibilité des Employés</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Nom de l'Employé</th>
+                <th>Événement Assigné</th>
+                <th>Date</th>
+                <th>Horaire</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment in assignments %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ assignment.employee.full_name }}</td>
+                <td>{{ assignment.event.name }}</td>
+                <td>{{ assignment.event.date }}</td>
+                <td>{{ assignment.event.start_time }} - {{ assignment.event.end_time }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="text-center">Tous les employés sont disponibles.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

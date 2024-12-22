@@ -1,0 +1,37 @@
+@<!-- templates/assignments/bulk_allocate_materials.html -->
+{% extends 'base.html' %}
+
+{% block title %}Allouer des Matériaux{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Allouer des Matériaux pour {{ event.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Matériau</th>
+                    <th>Quantité Totale</th>
+                    <th>Disponible</th>
+                    <th>Quantité à Allouer</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for material in materials %}
+                <tr>
+                    <td>{{ material.name }}</td>
+                    <td>{{ material.total_quantity }}</td>
+                    <td>{{ material.available_quantity }}</td>
+                    <td>
+                        <input type="number" name="quantity_{{ material.id }}" min="0" max="{{ material.available_quantity }}" class="form-control">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Allouer</button>
+        <a href="{% url 'events:event_detail' event.id %}" class="btn btn-secondary">Annuler</a>
+    </form>
+</div>
+{% endblock %}

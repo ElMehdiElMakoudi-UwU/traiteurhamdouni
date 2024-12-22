@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des Plats{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Liste des Plats</h2>
+<table class="table table-striped mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Type</th>
+            <th>Prix</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dish in dishes %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ dish.name }}</td>
+            <td>{{ dish.get_dish_type_display }}</td>
+            <td>{{ dish.price }} €</td>
+            <td>
+                <a href="{% url 'menu:edit_dish' dish.pk %}" class="btn btn-sm btn-warning">Modifier</a>
+                <a href="{% url 'menu:delete_dish' dish.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">Aucun plat trouvé.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="text-center mt-4">
+    <a href="{% url 'menu:create_dish' %}" class="btn btn-primary">Ajouter un Nouveau Plat</a>
+</div>
+{% endblock %}

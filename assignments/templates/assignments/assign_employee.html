@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}Assigner STAFF{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Affectation du STAFF</h2>
+
+    <!-- Event Dropdown -->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="event-dropdown" class="form-label">Selectionner l'evenement</label>
+            <select id="event-dropdown" class="form-select" name="event">
+                <option value="" {% if not event %}selected{% endif %}>-- Select Event --</option>
+                {% for e in events %}
+                <option value="{{ e.id }}" {% if event and event.id == e.id %}selected{% endif %}>
+                    {{ e.name }} ({{ e.date }})
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <!-- Employee Availability Table -->
+    <form method="post" id="bulk-assign-form">
+        {% csrf_token %}
+        <input type="hidden" name="event" value="{{ event.id }}">
+        <div class="col-md-12 mt-4">
+            <h4>Disponibilites des employes</h4>
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Employee</th>
+                        <th>Departement</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Evenement associe</th>
+                        <th>Selectionner</th>
+                    </tr>
+                </thead>
+                <tbody id="availability-table">
+                    <tr>
+                        <td colspan="7" class="text-center">Sélectionnez un événement pour connaître la disponibilité des employés.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary mt-3">Affectation en bloc</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const eventDropdown = document.getElementById("event-dropdown");
+        const availabilityTable = document.getElementById("availability-table");
+        const bulkAssignForm = document.getElementById("bulk-assign-form");
+
+        // Function to fetch employee availability
+        function fetchAvailability(eventId) {
+            if (!eventId) {
+                availabilityTable.innerHTML = "<tr><td colspan='7'>Select an event to view employee availability.</td></tr>";
+                return;
+            }
+
+            fetch(`/assignments/fetch-availability/?event_id=${eventId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        availabilityTable.innerHTML = `<tr><td colspan="7">${data.error}</td></tr>`;
+                    } else {
+                        const rows = data.availability.map((entry, index) => `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${entry.name}</td>
+                                <td>${entry.department}</td>
+                                <td>${entry.role}</td>
+                                <td>
+                                    <span class="badge ${entry.status === 'Free' ? 'bg-success' : 'bg-danger'}">
+                                        ${entry.status}
+                                    </span>
+                                </td>
+                                <td>${entry.assigned_event || 'N/A'}</td>
+                                <td>
+                                    ${entry.status === 'Free' 
+                                        ? `<input type="checkbox" name="employees" value="${entry.id}">` 
+                                        : ''}
+                                </td>
+                            </tr>
+                        `).join('');
+                        availabilityTable.innerHTML = rows;
+                    }
+                })
+                .catch(() => {
+                    availabilityTable.innerHTML = "<tr><td colspan='7'>Error fetching data.</td></tr>";
+                });
+        }
+
+        // Fetch availability on page load if an event is already selected
+        const initialEventId = eventDropdown.value;
+        if (initialEventId) {
+            fetchAvailability(initialEventId);
+        }
+
+        // Fetch availability when the event changes
+        eventDropdown.addEventListener("change", function () {
+            const eventId = eventDropdown.value;
+            bulkAssignForm.querySelector('input[name="event"]').value = eventId;
+            fetchAvailability(eventId);
+        });
+    });
+</script>
+{% endblock %}

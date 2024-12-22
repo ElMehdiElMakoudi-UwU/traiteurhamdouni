@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Customer{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Ajouter nouveau client</h2>
+<div class="card mt-4">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3">Enregistrer client</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="text-center mt-4">
+    <a href="{% url 'customer_list' %}" class="btn btn-secondary">Afficher tous les clients</a>
+</div>
+{% endblock %}

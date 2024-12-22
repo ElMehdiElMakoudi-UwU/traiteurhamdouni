@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des Menus{% endblock %}
+
+{% block content %}
+<h2 class="text-center">Liste des Menus</h2>
+<table class="table table-striped mt-4">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Entrée</th>
+            <th>Premier Plat</th>
+            <th>Second Plat</th>
+            <th>Dessert</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for menu in menus %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ menu.name }}</td>
+            <td>{{ menu.starter_dish }}</td>
+            <td>{{ menu.first_main_plate }}</td>
+            <td>{{ menu.second_main_plate }}</td>
+            <td>{{ menu.dessert }}</td>
+            <td>
+                <a href="{% url 'menu:edit_menu' menu.pk %}" class="btn btn-sm btn-warning">Modifier</a>
+                <a href="{% url 'menu:delete_menu' menu.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="7" class="text-center">Aucun menu trouvé.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="text-center mt-4">
+    <a href="{% url 'menu:create_menu' %}" class="btn btn-primary">Ajouter un Nouveau Menu</a>
+</div>
+{% endblock %}

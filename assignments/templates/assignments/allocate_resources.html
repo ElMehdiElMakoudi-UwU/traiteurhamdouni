@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Assigner le materiel pour {{ event.name }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Materiel</th>
+                <th>Disponble</th>
+                <th>Qty a Assigner</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resource in resources %}
+            <tr>
+                <td>{{ resource.name }}</td>
+                <td>{{ resource.available_quantity }}</td>
+                <td>
+                    <input type="number" name="quantity_{{ resource.id }}" min="0" max="{{ resource.available_quantity }}">
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Assigner</button>
+</form>
+{% endblock %}

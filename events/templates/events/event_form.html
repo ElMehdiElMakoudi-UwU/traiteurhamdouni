@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Add/Edit Event{% endblock %}
+
+{% load custom_filters %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">{{ form.instance.pk|yesno:"Edit Event,Add Event" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_name" class="form-label">Nom d'evenement</label>
+            {{ form.name|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_date" class="form-label">Date</label>
+            {{ form.date|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_start_time" class="form-label">heure de debut</label>
+            {{ form.start_time|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_end_time" class="form-label">Heure de fin</label>
+            {{ form.end_time|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_event_type" class="form-label">Type</label>
+            {{ form.event_type|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_client" class="form-label">Client</label>
+            {{ form.client|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_number_of_guests" class="form-label">Nombre d'invite</label>
+            {{ form.number_of_guests|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_venue_name" class="form-label">Salle des fetes</label>
+            {{ form.venue_name|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_venue_address" class="form-label">Adresse de la salle</label>
+            {{ form.venue_address|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_venue_contact" class="form-label">Contact de la salle</label>
+            {{ form.venue_contact|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_menu" class="form-label">Menu</label>
+            {{ form.menu|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_special_instructions" class="form-label">Instructions speciale</label>
+            {{ form.special_instructions|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_assigned_staff" class="form-label">Staff assigne</label>
+            {{ form.assigned_staff|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_decorations_required" class="form-label">Decorations</label>
+            {{ form.decorations_required|add_class:"form-check-input" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_logistics_notes" class="form-label">Logistics</label>
+            {{ form.logistics_notes|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_event_cost" class="form-label">Prix total</label>
+            {{ form.event_cost|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_amount_paid" class="form-label">Avance</label>
+            {{ form.amount_paid|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_payment_status" class="form-label">Etat de paiement</label>
+            {{ form.payment_status|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_event_status" class="form-label">Statut d'evenement</label>
+            {{ form.event_status|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_event_notes" class="form-label">Notes</label>
+            {{ form.event_notes|add_class:"form-control" }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{% url 'events:event_list' %}" class="btn btn-secondary mt-3">Cancel</a>
+    </form>
+</div>
+{% endblock %}

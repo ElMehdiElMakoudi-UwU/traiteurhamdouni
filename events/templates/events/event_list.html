@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des evenements{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Liste des evenements</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Evenement</th>
+                <th>Date</th>
+                <th>Heure de debut</th>
+                <th>Heure de fin</th>
+                <th>Type d'evenement</th>
+                <th>Client</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in events %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ event.name }}</td>
+                <td>{{ event.date|date:"M d, Y" }}</td>
+                <td>{{ event.start_time|time:"g:i a" }}</td>
+                <td>{{ event.end_time|time:"g:i a" }}</td>
+                <td>{{ event.event_type }}</td>
+                <td>{{ event.client }}</td>
+                <td>
+                    <a href="{% url 'events:event_detail' event.id %}" class="btn btn-info btn-sm">Details</a>
+                    <a href="{% url 'events:edit_event' event.id %}" class="btn btn-warning btn-sm">Modifier</a>
+                    <a href="{% url 'events:delete_event' event.id %}" class="btn btn-danger btn-sm">Supprimer</a>
+                    <a href="{% url 'assignments:assign_employee' %}?event_id={{ event.id }}" class="btn btn-primary btn-sm">Assigner staff</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" class="text-center">Pas d'evenement.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <a href="{% url 'events:add_event' %}" class="btn btn-primary mt-3">Ajouter evenement</a>
+</div>
+{% endblock %}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details d'evenement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .col-id {
+            width: 5%;
+            text-align: center;
+        }
+        .header, .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+        }
+        .header {
+            top: 0;
+        }
+        .footer {
+            bottom: 0;
+        }
+        .content {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <strong>Traiteur Hamdouni</strong> - Fournir des services de restauration exquis pour tous vos événements spéciaux.
+    </div>
+
+    <div class="content">
+        <h1>Details d'evenement</h1>
+        <h2>{{ event.name|default:"Not specified" }}</h2>
+    
+        <div class="section">
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Location:</strong> {{ event.venue_address }}</p>
+            <p><strong>Type:</strong> {{ event.get_event_type_display }}</p>
+            <p><strong>Nombre d'invites:</strong> {{ event.number_of_guests }}</p>
+        </div>
+    
+        <div class="section">
+            <h3>Details du client :</h3>
+            <p><strong>Nom:</strong> {{ client.full_name }}</p>
+            <p><strong>Contact:</strong> {{ client.phone_number }}</p>
+            <p><strong>Addresse:</strong> {{ client.address }}</p>
+        </div>
+    
+        <div class="section">
+            <h3>Menu Details</h3>
+            {% if menu %}
+            <p><strong>Entree:</strong> {{ menu.starter_dish.name|default:"Not specified" }}</p>
+            <p><strong>1er plat principal:</strong> {{ menu.first_main_plate.name|default:"Not specified" }}</p>
+            <p><strong>2eme plat principal:</strong> {{ menu.second_main_plate.name|default:"Not specified" }}</p>
+            <p><strong>Dessert:</strong> {{ menu.dessert.name|default:"Not specified" }}</p>
+            {% else %}
+            <p>No menu assigned for this event.</p>
+            {% endif %}
+        </div>
+    
+        <div class="section">
+            <h3>Employes assignes :</h3>
+            {% if assignments %}
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-id">#</th>
+                        <th>Employe</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for assignment in assignments %}
+                    <tr>
+                        <td class="col-id">{{ forloop.counter }}</td>
+                        <td>{{ assignment.employee.full_name }}</td>
+                        <td>{{ assignment.assigned_role|default:"N/A" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>No employees assigned to this event.</p>
+            {% endif %}
+        </div>  
+          
+        <h3>Materiel assignes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-id">#</th>
+                    <th>Materiel</th>
+                    <th>Quantite Allocated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for allocation in allocated_materials %}
+                <tr>
+                    <td class="col-id">{{ forloop.counter }}</td>
+                    <td>{{ allocation.material.name }}</td>
+                    <td>{{ allocation.quantity_allocated }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td>No materials allocated.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <em>Traiteur Hamdouni</em> | Contact us: info@traiteurhamdouni.com | © {{ current_year }}
+    </div>
+</body>
+</html>

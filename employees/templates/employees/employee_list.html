@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Liste des Employés{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Liste des Employés</h2>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Nom Complet</th>
+                <th>Numéro de Téléphone</th>
+                <th>Département</th>
+                <th>Rôle</th>
+                <th>Date de Début</th>
+                <th>Rémunération par Événement</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ employee.full_name }}</td>
+                <td>{{ employee.phone_number }}</td>
+                <td>{{ employee.get_department_display }}</td>
+                <td>{{ employee.get_role_display }}</td>
+                <td>{{ employee.start_date }}</td>
+                <td>{{ employee.pay_per_event }}€</td>
+                <td>
+                    <a href="{% url 'employees:edit_employee' employee.pk %}" class="btn btn-sm btn-warning">Modifier</a>
+                    <a href="{% url 'employees:delete_employee' employee.pk %}" class="btn btn-sm btn-danger">Supprimer</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" class="text-center">Aucun employé trouvé.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'employees:add_employee' %}" class="btn btn-primary mt-3">Ajouter un Employé</a>
+</div>
+{% endblock %}
