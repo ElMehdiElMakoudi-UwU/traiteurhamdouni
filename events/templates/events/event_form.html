@@ -4,11 +4,10 @@
 
 {% load custom_filters %}
 
-
 {% block content %}
 <div class="container mt-4">
     <h2 class="mb-4">{{ form.instance.pk|yesno:"Edit Event,Add Event" }}</h2>
-    <form method="post">
+    <form method="post" id="event-form">
         {% csrf_token %}
         <div class="mb-3">
             <label for="id_name" class="form-label">Nom d'evenement</label>
@@ -19,7 +18,7 @@
             {{ form.date|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_start_time" class="form-label">heure de debut</label>
+            <label for="id_start_time" class="form-label">Heure de début</label>
             {{ form.start_time|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -35,11 +34,11 @@
             {{ form.client|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_number_of_guests" class="form-label">Nombre d'invite</label>
+            <label for="id_number_of_guests" class="form-label">Nombre d'invités</label>
             {{ form.number_of_guests|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_venue_name" class="form-label">Salle des fetes</label>
+            <label for="id_venue_name" class="form-label">Salle des fêtes</label>
             {{ form.venue_name|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -55,43 +54,94 @@
             {{ form.menu|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_special_instructions" class="form-label">Instructions speciale</label>
+            <label for="id_special_instructions" class="form-label">Instructions spéciales</label>
             {{ form.special_instructions|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_assigned_staff" class="form-label">Staff assigne</label>
+            <label for="id_assigned_staff" class="form-label">Staff assigné</label>
             {{ form.assigned_staff|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_decorations_required" class="form-label">Decorations</label>
+            <label for="id_decorations_required" class="form-label">Décorations</label>
             {{ form.decorations_required|add_class:"form-check-input" }}
         </div>
         <div class="mb-3">
-            <label for="id_logistics_notes" class="form-label">Logistics</label>
+            <label for="id_logistics_notes" class="form-label">Notes logistiques</label>
             {{ form.logistics_notes|add_class:"form-control" }}
         </div>
+
+        <!-- New Financial Fields -->
         <div class="mb-3">
-            <label for="id_event_cost" class="form-label">Prix total</label>
-            {{ form.event_cost|add_class:"form-control" }}
+            <label for="id_price_per_table" class="form-label">Prix par table</label>
+            {{ form.price_per_table|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_amount_paid" class="form-label">Avance</label>
+            <label for="id_number_of_tables" class="form-label">Nombre de tables</label>
+            {{ form.number_of_tables|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_price_of_decoration" class="form-label">Prix de décoration</label>
+            {{ form.price_of_decoration|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_price_of_extras" class="form-label">Prix des extras</label>
+            {{ form.price_of_extras|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label class="form-label"><b>total (calculé automatiquement)</b></label>
+            <input type="text" class="form-control" id="total-price" readonly>
+        </div>
+
+        <!-- Existing Financial Fields -->
+        <!-- <div class="mb-3">
+            <label for="id_event_cost" class="form-label">Coût total de l'événement</label>
+            {{ form.event_cost|add_class:"form-control" }}
+        </div> -->
+        <div class="mb-3">
+            <label for="id_amount_paid" class="form-label"><b>Avance</b></label>
             {{ form.amount_paid|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_payment_status" class="form-label">Etat de paiement</label>
+            <label for="id_payment_status" class="form-label">État du paiement</label>
             {{ form.payment_status|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_event_status" class="form-label">Statut d'evenement</label>
+            <label for="id_event_status" class="form-label">Statut de l'événement</label>
             {{ form.event_status|add_class:"form-control" }}
         </div>
         <div class="mb-3">
             <label for="id_event_notes" class="form-label">Notes</label>
             {{ form.event_notes|add_class:"form-control" }}
         </div>
+
         <button type="submit" class="btn btn-primary">Enregistrer</button>
-        <a href="{% url 'events:event_list' %}" class="btn btn-secondary mt-3">Cancel</a>
+        <a href="{% url 'events:event_list' %}" class="btn btn-secondary mt-3">Annuler</a>
     </form>
 </div>
+
+<!-- JavaScript for Real-Time Calculation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const pricePerTableInput = document.getElementById('id_price_per_table');
+        const numberOfTablesInput = document.getElementById('id_number_of_tables');
+        const priceOfDecorationInput = document.getElementById('id_price_of_decoration');
+        const priceOfExtrasInput = document.getElementById('id_price_of_extras');
+        const totalPriceInput = document.getElementById('total-price');
+
+        function calculateTotalPrice() {
+            const pricePerTable = parseFloat(pricePerTableInput.value) || 0;
+            const numberOfTables = parseInt(numberOfTablesInput.value) || 0;
+            const priceOfDecoration = parseFloat(priceOfDecorationInput.value) || 0;
+            const priceOfExtras = parseFloat(priceOfExtrasInput.value) || 0;
+
+            const totalPrice = (pricePerTable * numberOfTables) + priceOfDecoration + priceOfExtras;
+            totalPriceInput.value = totalPrice.toFixed(2);
+        }
+
+        pricePerTableInput.addEventListener('input', calculateTotalPrice);
+        numberOfTablesInput.addEventListener('input', calculateTotalPrice);
+        priceOfDecorationInput.addEventListener('input', calculateTotalPrice);
+        priceOfExtrasInput.addEventListener('input', calculateTotalPrice);
+    });
+</script>
 {% endblock %}

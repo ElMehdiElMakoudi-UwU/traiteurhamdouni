@@ -14,13 +14,15 @@ def event_list(request):
     events = Event.objects.all()
     return render(request, 'events/event_list.html', {'events': events})
 
-# Add Event
 def add_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
-            print("Form is valid")
-            form.save()
+            event = form.save(commit=False)
+            # Calculate the total price
+            event.event_cost = event.calculate_total_price()
+            event.save()
+            form.save_m2m()
             messages.success(request, "Event added successfully!")
             return redirect('events:event_list')
         else:
@@ -28,6 +30,7 @@ def add_event(request):
     else:
         form = EventForm()
     return render(request, 'events/event_form.html', {'form': form})
+
 
 # Edit Event
 def edit_event(request, pk):
