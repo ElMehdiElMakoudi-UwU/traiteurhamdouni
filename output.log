@@ -1,0 +1,204 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 25, 2024 - 16:53:45
+Django version 4.2.7, using settings 'system_traiteur.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+[25/Dec/2024 16:53:58] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 16:53:58] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 16:54:01] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 16:54:01] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 16:54:02] "GET /events/3/ HTTP/1.0" 200 6331
+[25/Dec/2024 16:54:04] "GET /events/3/pdf/ HTTP/1.0" 200 4100
+[25/Dec/2024 16:54:22] "GET /events/3/ HTTP/1.0" 200 6331
+[25/Dec/2024 16:54:27] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 16:54:27] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 16:54:33] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 16:54:33] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 16:54:34] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 16:54:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 17:02:32] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 17:02:33] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 17:19:43] "GET / HTTP/1.0" 302 0
+Not Found: /wp-login.php
+[25/Dec/2024 17:39:27] "GET /wp-login.php HTTP/1.0" 404 3001
+[25/Dec/2024 17:47:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 17:47:37] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 17:47:37] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 17:47:41] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 17:47:44] "GET /events/add/ HTTP/1.0" 200 13363
+[25/Dec/2024 17:48:40] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 17:48:41] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[25/Dec/2024 17:48:41] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[25/Dec/2024 17:48:41] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:41] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:42] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:43] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[25/Dec/2024 17:48:43] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 18:17:40] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 18:17:48] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 18:21:23] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 18:21:23] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 18:36:58] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 18:36:58] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:36:58] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[25/Dec/2024 18:36:59] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[25/Dec/2024 18:36:59] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:36:59] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:36:59] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:36:59] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:36:59] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:00] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:00] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:00] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:00] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:00] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:37:01] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 18:37:45] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 18:37:45] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 18:42:46] "GET /employees/ HTTP/1.0" 200 5366
+[25/Dec/2024 18:42:51] "GET /employees/add/ HTTP/1.0" 200 5658
+[25/Dec/2024 18:43:03] "GET /employees/ HTTP/1.0" 200 5366
+[25/Dec/2024 18:48:33] "GET / HTTP/1.1" 302 0
+[25/Dec/2024 18:48:33] "GET /accounts/login/ HTTP/1.1" 200 4372
+[25/Dec/2024 18:53:44] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 18:53:44] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:44] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[25/Dec/2024 18:53:45] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[25/Dec/2024 18:53:45] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:45] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:45] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:45] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:45] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:46] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:47] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:47] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:47] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[25/Dec/2024 18:53:47] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 19:17:42] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 19:17:42] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /favicon.ico
+[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
+Not Found: /favicon.ico
+[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
+Not Found: /favicon.ico
+[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
+Not Found: /login.rsp
+[25/Dec/2024 19:17:42] "GET /login.rsp HTTP/1.0" 404 2986
+Not Found: /device.rsp
+[25/Dec/2024 19:17:42] "GET /device.rsp?opt=user&cmd=list HTTP/1.0" 404 3011
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:43] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3194
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:43] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3199
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:44] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22asdf1234%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:46] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22abc12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:46] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3199
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:17:47] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345abc%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
+[25/Dec/2024 19:18:05] "GET / HTTP/1.1" 302 0
+[25/Dec/2024 19:18:05] "GET /accounts/login/ HTTP/1.1" 200 4372
+Not Found: /favicon.ico
+[25/Dec/2024 19:18:05] "GET /favicon.ico HTTP/1.1" 404 2996
+Not Found: /favicon.ico
+[25/Dec/2024 19:18:05] "GET /favicon.ico HTTP/1.1" 404 2996
+Not Found: /favicon.ico
+[25/Dec/2024 19:18:06] "GET /favicon.ico HTTP/1.1" 404 2996
+Not Found: /login.rsp
+[25/Dec/2024 19:18:06] "GET /login.rsp HTTP/1.1" 404 2990
+Not Found: /device.rsp
+[25/Dec/2024 19:18:06] "GET /device.rsp?opt=user&cmd=list HTTP/1.1" 404 3015
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3198
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3203
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22asdf1234%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22abc12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3203
+Not Found: /cgi-bin/gw.cgi
+[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345abc%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
