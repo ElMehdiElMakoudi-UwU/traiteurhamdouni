@@ -6,22 +6,36 @@ from employees.models import Employee
 
 class Event(models.Model):
     EVENT_TYPES = [
-        ('wedding', 'Wedding'),
-        ('corporate', 'Corporate Event'),
-        ('birthday', 'Birthday'),
-        ('private', 'Private Party'),
-    ]
+            ('wedding', 'Mariage'),
+            ('corporate', 'Événement d\'entreprise'),
+            ('birthday', 'Anniversaire'),
+            ('private', 'Fête privée'),
+            ('engagement', 'Fiançailles'),
+            ('baptism', 'Baptême'),
+            ('marriage_signature', 'Signature d\'acte de mariage'),
+            ('family_reunion', 'Réunion de famille'),
+            ('conference', 'Conférence'),
+            ('charity_event', 'Événement caritatif'),
+            ('graduation', 'Remise de diplômes'),
+            ('baby_shower', 'Fête de naissance'),
+            ('festival', 'Festival'),
+            ('exhibition', 'Exposition'),
+            ('concert', 'Concert'),
+            ('anniversary', 'Anniversaire de mariage'),
+            ('new_year', 'Nouvel An'),
+            ('retirement', 'Départ à la retraite'),
+        ]
 
     PAYMENT_STATUS_CHOICES = [
-        ('pending', 'Pending'),
-        ('partial', 'Partial'),
-        ('paid', 'Paid'),
+        ('pending', 'En attente'),
+        ('partial', 'Avance'),
+        ('paid', 'Payé'),
     ]
 
     EVENT_STATUS_CHOICES = [
-        ('scheduled', 'Scheduled'),
-        ('completed', 'Completed'),
-        ('cancelled', 'Cancelled'),
+        ('scheduled', 'Programmé'),
+        ('completed', 'Terminé'),
+        ('cancelled', 'Annulé'),
     ]
 
     # Basic Information

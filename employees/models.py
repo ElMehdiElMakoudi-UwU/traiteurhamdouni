@@ -3,16 +3,19 @@ from django.core.exceptions import ValidationError
 
 # Departments and Roles
 DEPARTMENTS = [
-    ('decoration', 'Decoration'),
-    ('cooking', 'Cooking'),
+    ('decoration', 'Décoration'),
+    ('cooking', 'Cuisine'),
     ('service', 'Service'),
-    ('logistics', 'Logistics'),
+    ('logistics', 'Logistique'),
+    ('managment', 'Gestion'),
 ]
 
 ROLES = [
     ('manager', 'Manager'),
     ('staff', 'Staff'),
     ('chef', 'Chef'),
+    ('photograph', 'Photograph'),
+    ('waiter', 'Serveur'),
 ]
 
 class Employee(models.Model):
