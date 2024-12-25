@@ -67,9 +67,9 @@
     
         <div class="section">
             <p><strong>Date:</strong> {{ event.date }}</p>
-            <p><strong>Location:</strong> {{ event.venue_address }}</p>
+            <p><strong>Location:</strong> {{ event.venue_name }}</p>
             <p><strong>Type:</strong> {{ event.get_event_type_display }}</p>
-            <p><strong>Nombre d'invites:</strong> {{ event.number_of_guests }}</p>
+            <p><strong>Nombre de tables:</strong> {{ event.number_of_tables }}</p>
         </div>
     
         <div class="section">
@@ -80,14 +80,30 @@
         </div>
     
         <div class="section">
-            <h3>Menu Details</h3>
-            {% if menu %}
-            <p><strong>Entree:</strong> {{ menu.starter_dish.name|default:"Not specified" }}</p>
-            <p><strong>1er plat principal:</strong> {{ menu.first_main_plate.name|default:"Not specified" }}</p>
-            <p><strong>2eme plat principal:</strong> {{ menu.second_main_plate.name|default:"Not specified" }}</p>
-            <p><strong>Dessert:</strong> {{ menu.dessert.name|default:"Not specified" }}</p>
+            <h3>Dishes Selection</h3>
+            {% if selected_dishes %}
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-id">#</th>
+                        <th>Dish Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for dish in selected_dishes %}
+                    <tr>
+                        <td class="col-id">{{ forloop.counter }}</td>
+                        <td>{{ dish.name }}</td>
+                        <td>{{ dish.get_dish_type_display }}</td>
+                        <td>{{ dish.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
             {% else %}
-            <p>No menu assigned for this event.</p>
+            <p>No dishes selected for this event.</p>
             {% endif %}
         </div>
     
@@ -135,7 +151,7 @@
                 </tr>
                 {% empty %}
                 <tr>
-                    <td>No materials allocated.</td>
+                    <td colspan="3" class="text-center">No materials allocated.</td>
                 </tr>
                 {% endfor %}
             </tbody>
