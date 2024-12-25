@@ -56,7 +56,7 @@ class Event(models.Model):
     number_of_tables = models.PositiveIntegerField(verbose_name="Number of Tables",blank=True, default=0)
     price_of_decoration = models.DecimalField(max_digits=10, decimal_places=2,blank=True, verbose_name="Price of Decoration", default=0.00)
     price_of_extras = models.DecimalField(max_digits=10, decimal_places=2,blank=True, verbose_name="Price of Extras", default=0.00)
-    event_cost = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Event Cost", default=0.00)
+    event_cost = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Event Cost", default=0.00, blank=True)
     amount_paid = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Amount Paid", default=0.00)
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending', verbose_name="Payment Status")
 
