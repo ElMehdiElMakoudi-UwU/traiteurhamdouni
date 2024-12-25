@@ -77,9 +77,18 @@ def customer_detail(request, pk):
     })
 
 
-from django.shortcuts import render
 from datetime import datetime
+from django.shortcuts import render
+from events.models import Event
 
 def home(request):
-    current_month = datetime.now().strftime('%B %Y')  # Example: "December 2024"
-    return render(request, 'home.html', {'current_month': current_month})
+    # Get the current month and year
+    current_month = datetime.now().month
+    current_year = datetime.now().year
+
+    # Query events for the current month
+    monthly_events_count = Event.objects.filter(date__year=current_year, date__month=current_month).count()
+
+    return render(request, 'home.html', {
+        'monthly_events_count': monthly_events_count,
+    })
