@@ -1,6 +1,6 @@
 from django.db import models
 from client.models import Customer
-from menu.models import Menu
+from menu.models import Dish
 from employees.models import Employee
 
 
@@ -29,20 +29,19 @@ class Event(models.Model):
     date = models.DateField(verbose_name="Event Date")
     start_time = models.TimeField(verbose_name="Start Time")
     end_time = models.TimeField(verbose_name="End Time")
-    event_type = models.CharField(max_length=50, choices=EVENT_TYPES,blank=True, verbose_name="Event Type")
+    event_type = models.CharField(max_length=50, choices=EVENT_TYPES, blank=True, verbose_name="Event Type")
 
     # Client Information
     client = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="events")
-    number_of_guests = models.PositiveIntegerField(blank=True, verbose_name="Number of Guests")
+    number_of_guests = models.PositiveIntegerField(blank=True, verbose_name="Number of Guests",null=True)
 
     # Venue Information
-    venue_name = models.CharField(max_length=255,blank=True, verbose_name="Venue Name")
+    venue_name = models.CharField(max_length=255, blank=True, verbose_name="Venue Name")
     venue_address = models.TextField(blank=True, verbose_name="Venue Address")
     venue_contact = models.CharField(max_length=20, verbose_name="Venue Contact", blank=True, null=True)
 
-    # Menu Information
-    menu = models.ForeignKey(Menu, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Menu")
-    special_instructions = models.TextField(blank=True, null=True, verbose_name="Special Instructions")
+    # Dish Selection (Instead of Menu)
+    selected_dishes = models.ManyToManyField(Dish, related_name="events", verbose_name="Selected Dishes")
 
     # Staff Assignment
     assigned_staff = models.ManyToManyField(Employee, related_name="assigned_events", blank=True)
@@ -61,7 +60,7 @@ class Event(models.Model):
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='pending', verbose_name="Payment Status")
 
     # Status and Notes
-    event_status = models.CharField(max_length=20, choices=EVENT_STATUS_CHOICES, default='scheduled',blank=True, verbose_name="Event Status")
+    event_status = models.CharField(max_length=20, choices=EVENT_STATUS_CHOICES, default='scheduled', blank=True, verbose_name="Event Status")
     event_notes = models.TextField(blank=True, null=True, verbose_name="Event Notes")
 
     def calculate_total_price(self):
@@ -90,7 +89,7 @@ class Event(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.get_event_status_display()}) - {self.date}"
-    
+
     def allocated_resources(self):
         """
         Return the resources allocated for this event.

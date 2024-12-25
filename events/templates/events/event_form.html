@@ -9,8 +9,9 @@
     <h2 class="mb-4">{{ form.instance.pk|yesno:"Edit Event,Add Event" }}</h2>
     <form method="post" id="event-form">
         {% csrf_token %}
+        <!-- General Event Information -->
         <div class="mb-3">
-            <label for="id_name" class="form-label">Nom d'evenement</label>
+            <label for="id_name" class="form-label">Nom d'événement</label>
             {{ form.name|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -33,10 +34,8 @@
             <label for="id_client" class="form-label">Client</label>
             {{ form.client|add_class:"form-control" }}
         </div>
-        <div class="mb-3">
-            <label for="id_number_of_guests" class="form-label">Nombre d'invités</label>
-            {{ form.number_of_guests|add_class:"form-control" }}
-        </div>
+
+        <!-- Venue Information -->
         <div class="mb-3">
             <label for="id_venue_name" class="form-label">Salle des fêtes</label>
             {{ form.venue_name|add_class:"form-control" }}
@@ -49,14 +48,26 @@
             <label for="id_venue_contact" class="form-label">Contact de la salle</label>
             {{ form.venue_contact|add_class:"form-control" }}
         </div>
+
+        <!-- Dish Selection -->
+        <h4>Sélectionnez les plats</h4>
         <div class="mb-3">
-            <label for="id_menu" class="form-label">Menu</label>
-            {{ form.menu|add_class:"form-control" }}
+            {% for category, dishes in dishes_by_category.items %}
+            <h5>{{ category }}</h5>
+            <ul>
+                {% for dish in dishes %}
+                <li>
+                    <label>
+                        <input type="checkbox" name="selected_dishes" value="{{ dish.id }}">
+                        {{ dish.name }}
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
         </div>
-        <div class="mb-3">
-            <label for="id_special_instructions" class="form-label">Instructions spéciales</label>
-            {{ form.special_instructions|add_class:"form-control" }}
-        </div>
+
+        <!-- Staff Assignment -->
         <div class="mb-3">
             <label for="id_assigned_staff" class="form-label">Staff assigné</label>
             {{ form.assigned_staff|add_class:"form-control" }}
@@ -70,7 +81,7 @@
             {{ form.logistics_notes|add_class:"form-control" }}
         </div>
 
-        <!-- New Financial Fields -->
+        <!-- Financial Fields -->
         <div class="mb-3">
             <label for="id_price_per_table" class="form-label">Prix par table</label>
             {{ form.price_per_table|add_class:"form-control" }}
@@ -88,17 +99,13 @@
             {{ form.price_of_extras|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label class="form-label"><b>total (calculé automatiquement)</b></label>
+            <label class="form-label"><b>Total (calculé automatiquement)</b></label>
             <input type="text" class="form-control" id="total-price" readonly>
         </div>
 
-        <!-- Existing Financial Fields -->
-        <!-- <div class="mb-3">
-            <label for="id_event_cost" class="form-label">Coût total de l'événement</label>
-            {{ form.event_cost|add_class:"form-control" }}
-        </div> -->
+        <!-- Payment Details -->
         <div class="mb-3">
-            <label for="id_amount_paid" class="form-label"><b>Avance</b></label>
+            <label for="id_amount_paid" class="form-label">Avance</label>
             {{ form.amount_paid|add_class:"form-control" }}
         </div>
         <div class="mb-3">

@@ -19,10 +19,10 @@ class Dish(models.Model):
 
 class Menu(models.Model):
     name = models.CharField(max_length=255, verbose_name="Menu Name")
-    starter_dish = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=False, related_name="starter_dishes")
-    first_main_plate = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=False, related_name="first_main_dishes")
-    second_main_plate = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=False, related_name="second_main_dishes")
-    dessert = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=False, related_name="desserts")
+    starter_dish = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=True, related_name="starter_dishes")
+    first_main_plate = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=True, related_name="first_main_dishes")
+    second_main_plate = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=True, related_name="second_main_dishes")
+    dessert = models.ForeignKey(Dish, on_delete=models.SET_NULL, null=True, blank=True, related_name="desserts")
 
     def __str__(self):
         return self.name

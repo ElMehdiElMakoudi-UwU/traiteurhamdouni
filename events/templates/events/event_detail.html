@@ -7,9 +7,40 @@
     <h2>Event: {{ event.name }}</h2>
     <p><strong>Date:</strong> {{ event.date }}</p>
     <p><strong>Heure:</strong> {{ event.start_time }} - {{ event.end_time }}</p>
-    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p><strong>Location:</strong> {{ event.venue_name }}</p>
+    <p><strong>Client:</strong> {{ event.client.full_name }}</p>
+    <p><strong>Nombre de tables:</strong> {{ event.number_of_tables }}</p>
     <a href="{% url 'events:event_pdf' event.id %}" class="btn btn-secondary mt-3">Download PDF</a>
     <a href="{% url 'assignments:bulk_allocate_materials' event.id %}" class="btn btn-secondary mt-3">Allocate Materials</a>
+    
+    <!-- Selected Dishes Section -->
+    <h4 class="mt-4">Dishes Selection</h4>
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Dish Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dish in selected_dishes %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ dish.name }}</td>
+                <td>{{ dish.get_dish_type_display }}</td>
+                <td>{{ dish.price }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" class="text-center">No dishes selected for this event.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Assigned Employees Section -->
     <h4 class="mt-4">Employes assigne</h4>
     <table class="table table-striped">
         <thead class="table-dark">
@@ -33,11 +64,12 @@
                     {% else %}
                     <span class="badge bg-danger">{{ assignment.status }}</span>
                     {% endif %}
-                </td>                <td>
+                </td>
+                <td>
                     <form method="post" action="{% url 'assignments:unassign_employee' assignment.id %}" style="display:inline;">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger btn-sm">Liberer</button>
-                    </form>                    
+                    </form>
                 </td>
             </tr>
             {% empty %}
