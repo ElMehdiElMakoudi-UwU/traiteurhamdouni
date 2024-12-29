@@ -59,6 +59,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/materials/">Materiel</a>
                     </li>
+                    <li class="nav-item">
+                        <!-- Add the new Products button -->
+                        <a class="nav-link" href="{% url 'products:product_list' %}">Produits Royal</a>
+                    </li>
                     <!-- Authentication Links -->
                     {% if user.is_authenticated %}
                         <li class="nav-item">

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Bon de commande pour {{ event.name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Bon de commande pour l'evenement: {{ event.name }}</h2>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Nombre de tables:</strong> {{ event.number_of_tables }}</p>
+
+    <form method="post" id="product-order-form">
+        {% csrf_token %}
+        <table class="table table-striped mt-4">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Produit</th>
+                    <th>Qte calcule</th>
+                    <th>Qte finale</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in event_products %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ product.product.name }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>
+                        <input type="number" name="quantity_{{ product.id }}" 
+                               value="{{ product.quantity }}" 
+                               class="form-control">
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center">Aucun produit selectionne pour cet evenement</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Valider et generer le PDF</button>
+    </form>
+</div>
+{% endblock %}

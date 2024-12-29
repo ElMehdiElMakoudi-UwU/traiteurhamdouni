@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bon de Commande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bon de commande</h1>
+    <h2>Evenement: {{ event.name }}</h2>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Nombre de tables:</strong> {{ event.number_of_tables }}</p>
+
+    <h3>Produits</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produits</th>
+                <th>Qte</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in event_products %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ product.product.name }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">Aucun produit selectionne pour cet evenement.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Traiteur Hamdouni | {{ current_year }}</p>
+    </footer>
+</body>
+</html>

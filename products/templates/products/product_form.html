@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Produits Royal{% endblock %}
+
+{% load custom_filters %}
+
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ form.instance.pk|yesno:"Edit Product,Add Product" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_name" class="form-label">Designation</label>
+            {{ form.name|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_type" class="form-label">Type</label>
+            {{ form.type|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_purchase_price" class="form-label">Prix d'achat</label>
+            {{ form.purchase_price|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            <label for="id_selling_price" class="form-label">Prix de vente</label>
+            {{ form.selling_price|add_class:"form-control" }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{% url 'products:product_list' %}" class="btn btn-secondary">Annuler</a>
+    </form>
+</div>
+{% endblock %}

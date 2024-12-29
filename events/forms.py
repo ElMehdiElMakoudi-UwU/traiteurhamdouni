@@ -3,7 +3,26 @@ from .models import Event
 from menu.models import Dish
 
 
+from django import forms
+from .models import Event
+from menu.models import Dish
+from products.models import Product
+
+
 class EventForm(forms.ModelForm):
+    selected_dishes = forms.ModelMultipleChoiceField(
+        queryset=Dish.objects.all(),
+        widget=forms.CheckboxSelectMultiple(),
+        required=False,
+        label="Select Dishes",
+    )
+    products = forms.ModelMultipleChoiceField(
+        queryset=Product.objects.all(),
+        widget=forms.CheckboxSelectMultiple(),
+        required=False,
+        label="Select Products"
+    )
+
     class Meta:
         model = Event
         fields = [
@@ -12,7 +31,7 @@ class EventForm(forms.ModelForm):
             'assigned_staff', 'decorations_required',
             'logistics_notes', 'price_per_table', 'number_of_tables',
             'price_of_decoration', 'price_of_extras', 'event_cost', 'amount_paid',
-            'payment_status', 'event_status', 'event_notes', 'selected_dishes'
+            'payment_status', 'event_status', 'event_notes', 'selected_dishes', 'products'
         ]
         widgets = {
             'date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
@@ -22,9 +41,20 @@ class EventForm(forms.ModelForm):
             'event_notes': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
 
-    selected_dishes = forms.ModelMultipleChoiceField(
-        queryset=Dish.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
-        required=False,
-        label="Select Dishes",
+from django import forms
+from products.models import Product
+from events.models import EventProduct
+
+
+class EventProductForm(forms.ModelForm):
+    product = forms.ModelChoiceField(
+        queryset=Product.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'})
     )
+    quantity = forms.IntegerField(
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'readonly': 'readonly'})
+    )
+
+    class Meta:
+        model = EventProduct
+        fields = ['product', 'quantity']
