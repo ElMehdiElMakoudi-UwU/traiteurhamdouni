@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
-
-{% block title %}Add/Edit Event{% endblock %}
-
 {% load custom_filters %}
+
+{% block title %}Ajouter/Modifier Event{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
     <h2 class="mb-4">{{ form.instance.pk|yesno:"Edit Event,Add Event" }}</h2>
     <form method="post" id="event-form">
         {% csrf_token %}
-        <!-- General Event Information -->
+        
+        <!-- General Information -->
+        <h4>Information General</h4>
         <div class="mb-3">
-            <label for="id_name" class="form-label">Nom d'événement</label>
+            <label for="id_name" class="form-label">Nom d'evenement</label>
             {{ form.name|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_date" class="form-label">Date</label>
+            <label for="id_date" class="form-label">Date d'evenement</label>
             {{ form.date|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_start_time" class="form-label">Heure de début</label>
+            <label for="id_start_time" class="form-label">Heure de debut</label>
             {{ form.start_time|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -27,7 +28,7 @@
             {{ form.end_time|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_event_type" class="form-label">Type</label>
+            <label for="id_event_type" class="form-label">Type d'evenement</label>
             {{ form.event_type|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -36,62 +37,96 @@
         </div>
 
         <!-- Venue Information -->
+        <h4>Venue Information</h4>
         <div class="mb-3">
-            <label for="id_venue_name" class="form-label">Salle des fêtes</label>
+            <label for="id_venue_name" class="form-label">Nom de salle</label>
             {{ form.venue_name|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_venue_address" class="form-label">Adresse de la salle</label>
+            <label for="id_venue_address" class="form-label">Adresse de salle</label>
             {{ form.venue_address|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_venue_contact" class="form-label">Contact de la salle</label>
+            <label for="id_venue_contact" class="form-label">Numero de Tel de la salle</label>
             {{ form.venue_contact|add_class:"form-control" }}
         </div>
 
-        <!-- Dish Selection -->
-        <h4>Sélectionnez les plats</h4>
-        <div class="mb-3">
-            {% for category, dishes in dishes_by_category.items %}
-            <h5>{{ category }}</h5>
-            <ul>
-                {% for dish in dishes %}
-                <li>
-                    <label>
-                        <input type="checkbox" name="selected_dishes" value="{{ dish.id }}">
-                        {{ dish.name }}
-                    </label>
-                </li>
-                {% endfor %}
-            </ul>
-            {% endfor %}
-        </div>
+        <!-- Dishes -->
+        <h4>Plats</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    {% for category in dishes_by_category.keys %}
+                    <th>{{ category }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for category, dishes in dishes_by_category.items %}
+                    <td>
+                        {% for dish in dishes %}
+                        <div>
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    name="selected_dishes" 
+                                    value="{{ dish.id }}" 
+                                    {% if dish.id in preselected_dishes %} checked {% endif %}>
+                                {{ dish.name }}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Staff Assignment -->
-        <div class="mb-3">
-            <label for="id_assigned_staff" class="form-label">Staff assigné</label>
-            {{ form.assigned_staff|add_class:"form-control" }}
-        </div>
-        <div class="mb-3">
-            <label for="id_decorations_required" class="form-label">Décorations</label>
-            {{ form.decorations_required|add_class:"form-check-input" }}
-        </div>
-        <div class="mb-3">
-            <label for="id_logistics_notes" class="form-label">Notes logistiques</label>
-            {{ form.logistics_notes|add_class:"form-control" }}
-        </div>
+        <!-- Products -->
+        <h4>Produits Royal</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    {% for category in products_by_category.keys %}
+                    <th>{{ category }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {% for category, products in products_by_category.items %}
+                    <td>
+                        {% for product in products %}
+                        <div>
+                            <label>
+                                <input 
+                                    type="checkbox" 
+                                    name="products" 
+                                    value="{{ product.id }}" 
+                                    {% if product.id in preselected_products %} checked {% endif %}>
+                                {{ product.name }}
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Financial Fields -->
+        <!-- Financial Information -->
+        <h4>Financial Information</h4>
         <div class="mb-3">
             <label for="id_price_per_table" class="form-label">Prix par table</label>
             {{ form.price_per_table|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_number_of_tables" class="form-label">Nombre de tables</label>
+            <label for="id_number_of_tables" class="form-label">Nombre de table</label>
             {{ form.number_of_tables|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_price_of_decoration" class="form-label">Prix de décoration</label>
+            <label for="id_price_of_decoration" class="form-label">Prix de la decoration</label>
             {{ form.price_of_decoration|add_class:"form-control" }}
         </div>
         <div class="mb-3">
@@ -99,34 +134,31 @@
             {{ form.price_of_extras|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label class="form-label"><b>Total (calculé automatiquement)</b></label>
+            <label class="form-label"><b>Total</b></label>
             <input type="text" class="form-control" id="total-price" readonly>
         </div>
-
-        <!-- Payment Details -->
         <div class="mb-3">
             <label for="id_amount_paid" class="form-label">Avance</label>
             {{ form.amount_paid|add_class:"form-control" }}
         </div>
         <div class="mb-3">
-            <label for="id_payment_status" class="form-label">État du paiement</label>
+            <label for="id_payment_status" class="form-label">Etat de paiement</label>
             {{ form.payment_status|add_class:"form-control" }}
         </div>
-        <div class="mb-3">
-            <label for="id_event_status" class="form-label">Statut de l'événement</label>
-            {{ form.event_status|add_class:"form-control" }}
-        </div>
+
+        <!-- Notes -->
+        <h4>Additional Information</h4>
         <div class="mb-3">
             <label for="id_event_notes" class="form-label">Notes</label>
             {{ form.event_notes|add_class:"form-control" }}
         </div>
 
         <button type="submit" class="btn btn-primary">Enregistrer</button>
-        <a href="{% url 'events:event_list' %}" class="btn btn-secondary mt-3">Annuler</a>
+        <a href="{% url 'events:event_list' %}" class="btn btn-secondary">Annuler</a>
     </form>
 </div>
 
-<!-- JavaScript for Real-Time Calculation -->
+<!-- JavaScript for Real-Time Total Calculation -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const pricePerTableInput = document.getElementById('id_price_per_table');

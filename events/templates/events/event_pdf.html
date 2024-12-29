@@ -80,15 +80,14 @@
         </div>
     
         <div class="section">
-            <h3>Dishes Selection</h3>
+            <h3>Selection des plats</h3>
             {% if selected_dishes %}
             <table>
                 <thead>
                     <tr>
                         <th class="col-id">#</th>
-                        <th>Dish Name</th>
-                        <th>Category</th>
-                        <th>Price</th>
+                        <th>Plat</th>
+                        <th>Categorie</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -97,16 +96,44 @@
                         <td class="col-id">{{ forloop.counter }}</td>
                         <td>{{ dish.name }}</td>
                         <td>{{ dish.get_dish_type_display }}</td>
-                        <td>{{ dish.price }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             {% else %}
-            <p>No dishes selected for this event.</p>
+            <p>Aucun plat selectionne pour cet evenement</p>
             {% endif %}
         </div>
     
+        <div class="section">
+            <h3>Produits Royal</h3>
+            {% if event_products %}
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-id">#</th>
+                        <th>Produit</th>
+                        <th>Categorie</th>
+                        <th>Qte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event_product in event_products %}
+                    <tr>
+                        <td class="col-id">{{ forloop.counter }}</td>
+                        <td>{{ event_product.product.name }}</td>
+                        <td>{{ event_product.product.get_type_display }}</td>
+                        <td>{{ event_product.quantity }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>Aucun produit utilise pour cet evenement.</p>
+            {% endif %}
+        </div>
+        
+
         <div class="section">
             <h3>Employes assignes :</h3>
             {% if assignments %}
@@ -129,7 +156,7 @@
                 </tbody>
             </table>
             {% else %}
-            <p>No employees assigned to this event.</p>
+            <p>Aucun employe affecte a cet evenement</p>
             {% endif %}
         </div>  
           
@@ -139,7 +166,7 @@
                 <tr>
                     <th class="col-id">#</th>
                     <th>Materiel</th>
-                    <th>Quantite Allocated</th>
+                    <th>Quantite Affecte</th>
                 </tr>
             </thead>
             <tbody>
@@ -151,7 +178,7 @@
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="3" class="text-center">No materials allocated.</td>
+                    <td colspan="3" class="text-center">pas de materiel affecte.</td>
                 </tr>
                 {% endfor %}
             </tbody>

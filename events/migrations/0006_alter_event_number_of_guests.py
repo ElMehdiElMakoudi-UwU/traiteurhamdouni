@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='number_of_guests',
-            field=models.PositiveIntegerField(blank=True, null=True, verbose_name='Number of Guests'),
+            field=models.PositiveIntegerField(blank=True, null=True, verbose_name='Number of Guests',default=0),
         ),
     ]
