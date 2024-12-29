@@ -80,8 +80,18 @@ def customer_detail(request, pk):
 from datetime import datetime
 from django.shortcuts import render
 from events.models import Event
+from django.db.models import Sum
 
 def home(request):
+
+    now = datetime.now()
+
+    # Calculate total revenue for completed events
+    total_revenue = (
+        Event.objects.filter(date__year=now.year, date__month=now.month)
+        .aggregate(total_revenue=Sum('event_cost'))['total_revenue']
+    ) or 0
+
     # Get the current month and year
     current_month = datetime.now().month
     current_year = datetime.now().year
@@ -89,6 +99,20 @@ def home(request):
     # Query events for the current month
     monthly_events_count = Event.objects.filter(date__year=current_year, date__month=current_month).count()
 
+    # Find the next upcoming event
+    today = datetime.now().date()
+    next_event = (
+        Event.objects.filter(date__gte=today).order_by('date').first()
+    )
+
+    if next_event:
+        days_until_next_event = (next_event.date - today).days
+    else:
+        days_until_next_event = None
+
     return render(request, 'home.html', {
+        'total_revenue': total_revenue,
         'monthly_events_count': monthly_events_count,
+        'next_event': next_event,
+        'days_until_next_event': days_until_next_event,
     })
