@@ -2,203 +2,3108 @@ Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-December 25, 2024 - 16:53:45
+December 25, 2024 - 19:36:26
 Django version 4.2.7, using settings 'system_traiteur.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 
-[25/Dec/2024 16:53:58] "GET / HTTP/1.0" 200 5459
-[25/Dec/2024 16:53:58] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 16:54:01] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 16:54:01] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
-[25/Dec/2024 16:54:02] "GET /events/3/ HTTP/1.0" 200 6331
-[25/Dec/2024 16:54:04] "GET /events/3/pdf/ HTTP/1.0" 200 4100
-[25/Dec/2024 16:54:22] "GET /events/3/ HTTP/1.0" 200 6331
-[25/Dec/2024 16:54:27] "GET / HTTP/1.0" 200 5459
-[25/Dec/2024 16:54:27] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 16:54:33] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 16:54:33] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 67
-[25/Dec/2024 16:54:34] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 16:54:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 17:02:32] "GET / HTTP/1.0" 200 5459
-[25/Dec/2024 17:02:33] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 17:19:43] "GET / HTTP/1.0" 302 0
-Not Found: /wp-login.php
-[25/Dec/2024 17:39:27] "GET /wp-login.php HTTP/1.0" 404 3001
-[25/Dec/2024 17:47:34] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 17:47:37] "GET / HTTP/1.0" 200 5459
-[25/Dec/2024 17:47:37] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 17:47:41] "GET /events/ HTTP/1.0" 200 4993
-[25/Dec/2024 17:47:44] "GET /events/add/ HTTP/1.0" 200 13363
-[25/Dec/2024 17:48:40] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 17:48:41] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 19:36:37] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 19:36:37] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 19:36:42] "POST /accounts/login/ HTTP/1.0" 302 0
+[25/Dec/2024 19:36:42] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 19:36:42] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 203
+[25/Dec/2024 19:36:49] "GET /events/ HTTP/1.0" 200 6391
+[25/Dec/2024 19:37:00] "GET /events/delete/2/ HTTP/1.0" 200 4259
+[25/Dec/2024 19:37:01] "POST /events/delete/2/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:01] "GET /events/ HTTP/1.0" 200 5689
+[25/Dec/2024 19:37:03] "GET /events/delete/3/ HTTP/1.0" 200 4257
+[25/Dec/2024 19:37:04] "POST /events/delete/3/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:04] "GET /events/ HTTP/1.0" 200 4990
+[25/Dec/2024 19:37:05] "GET /events/delete/5/ HTTP/1.0" 200 4254
+[25/Dec/2024 19:37:05] "POST /events/delete/5/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:05] "GET /events/ HTTP/1.0" 200 4415
+[25/Dec/2024 19:37:06] "GET /employees/ HTTP/1.0" 200 5366
+[25/Dec/2024 19:37:10] "GET /employees/delete/2/ HTTP/1.0" 200 4244
+[25/Dec/2024 19:37:11] "POST /employees/delete/2/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:11] "GET /employees/ HTTP/1.0" 200 4851
+[25/Dec/2024 19:37:12] "GET /employees/delete/1/ HTTP/1.0" 200 4257
+[25/Dec/2024 19:37:13] "POST /employees/delete/1/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:13] "GET /employees/ HTTP/1.0" 200 4454
+[25/Dec/2024 19:37:14] "GET /materials/ HTTP/1.0" 200 4932
+[25/Dec/2024 19:37:15] "POST /materials/1/delete/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:15] "GET /materials/ HTTP/1.0" 200 4359
+[25/Dec/2024 19:37:17] "GET /events/ HTTP/1.0" 200 4415
+[25/Dec/2024 19:37:18] "GET /client/customer-list/ HTTP/1.0" 200 7037
+[25/Dec/2024 19:37:20] "GET /client/delete-customer/1/ HTTP/1.0" 200 4180
+[25/Dec/2024 19:37:20] "POST /client/delete-customer/1/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:21] "GET /client/customer-list/ HTTP/1.0" 200 6494
+[25/Dec/2024 19:37:22] "GET /client/delete-customer/2/ HTTP/1.0" 200 4178
+[25/Dec/2024 19:37:23] "POST /client/delete-customer/2/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:23] "GET /client/customer-list/ HTTP/1.0" 200 5984
+[25/Dec/2024 19:37:24] "GET /client/delete-customer/3/ HTTP/1.0" 200 4169
+[25/Dec/2024 19:37:25] "POST /client/delete-customer/3/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:25] "GET /client/customer-list/ HTTP/1.0" 200 5498
+[25/Dec/2024 19:37:26] "GET /client/delete-customer/4/ HTTP/1.0" 200 4168
+[25/Dec/2024 19:37:27] "POST /client/delete-customer/4/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:27] "GET /client/customer-list/ HTTP/1.0" 200 5114
+[25/Dec/2024 19:37:29] "GET /menu/menus/ HTTP/1.0" 200 5724
+[25/Dec/2024 19:37:31] "GET /menu/menus/delete/3/ HTTP/1.0" 200 4198
+[25/Dec/2024 19:37:32] "POST /menu/menus/delete/3/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:32] "GET /menu/menus/ HTTP/1.0" 200 5197
+[25/Dec/2024 19:37:33] "GET /menu/menus/delete/2/ HTTP/1.0" 200 4165
+[25/Dec/2024 19:37:34] "POST /menu/menus/delete/2/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:34] "GET /menu/menus/ HTTP/1.0" 200 4693
+[25/Dec/2024 19:37:34] "GET /menu/menus/delete/1/ HTTP/1.0" 200 4168
+[25/Dec/2024 19:37:35] "POST /menu/menus/delete/1/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:35] "GET /menu/menus/ HTTP/1.0" 200 4295
+[25/Dec/2024 19:37:38] "GET /menu/dishes/ HTTP/1.0" 200 6393
+[25/Dec/2024 19:37:39] "GET /menu/dishes/delete/1/ HTTP/1.0" 200 4191
+[25/Dec/2024 19:37:40] "POST /menu/dishes/delete/1/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:40] "GET /menu/dishes/ HTTP/1.0" 200 6012
+[25/Dec/2024 19:37:41] "GET /menu/dishes/delete/3/ HTTP/1.0" 200 4189
+[25/Dec/2024 19:37:42] "POST /menu/dishes/delete/3/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:42] "GET /menu/dishes/ HTTP/1.0" 200 5633
+[25/Dec/2024 19:37:44] "GET /menu/dishes/delete/4/ HTTP/1.0" 200 4195
+[25/Dec/2024 19:37:45] "POST /menu/dishes/delete/4/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:45] "GET /menu/dishes/ HTTP/1.0" 200 5248
+[25/Dec/2024 19:37:46] "GET /menu/dishes/delete/5/ HTTP/1.0" 200 4182
+[25/Dec/2024 19:37:47] "POST /menu/dishes/delete/5/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:47] "GET /menu/dishes/ HTTP/1.0" 200 4876
+[25/Dec/2024 19:37:48] "GET /menu/dishes/delete/6/ HTTP/1.0" 200 4186
+[25/Dec/2024 19:37:49] "POST /menu/dishes/delete/6/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:49] "GET /menu/dishes/ HTTP/1.0" 200 4500
+[25/Dec/2024 19:37:50] "GET /menu/dishes/delete/7/ HTTP/1.0" 200 4196
+[25/Dec/2024 19:37:51] "POST /menu/dishes/delete/7/ HTTP/1.0" 302 0
+[25/Dec/2024 19:37:51] "GET /menu/dishes/ HTTP/1.0" 200 4223
+[25/Dec/2024 19:37:52] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 19:37:52] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[25/Dec/2024 19:45:38] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 19:45:38] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 19:45:45] "POST /accounts/login/ HTTP/1.0" 302 0
+[25/Dec/2024 19:45:45] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 19:45:45] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[25/Dec/2024 19:45:51] "GET /events/ HTTP/1.0" 200 4415
+[25/Dec/2024 19:45:55] "GET /events/add/ HTTP/1.0" 200 12457
+[25/Dec/2024 20:54:18] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:00:06] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:00:06] "GET / HTTP/1.0" 302 0
 Not Found: /wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+[25/Dec/2024 22:00:06] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
 Not Found: /xmlrpc.php
-[25/Dec/2024 17:48:41] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
-[25/Dec/2024 17:48:41] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:00:07] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[25/Dec/2024 22:00:07] "GET / HTTP/1.0" 302 0
 Not Found: /blog/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:07] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /web/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 22:00:07] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /wordpress/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+[25/Dec/2024 22:00:08] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
 Not Found: /website/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+[25/Dec/2024 22:00:08] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
 Not Found: /wp/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+[25/Dec/2024 22:00:08] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
 Not Found: /news/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:41] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:08] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /2018/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:09] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /2019/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:09] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /shop/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:09] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /wp1/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 22:00:09] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /test/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:10] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /media/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+[25/Dec/2024 22:00:10] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
 Not Found: /wp2/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 22:00:10] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /site/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:42] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:00:10] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /cms/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:43] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 22:00:11] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /sito/wp-includes/wlwmanifest.xml
-[25/Dec/2024 17:48:43] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
-[25/Dec/2024 18:17:40] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 18:17:48] "GET /accounts/login/ HTTP/1.0" 200 4372
-[25/Dec/2024 18:21:23] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 18:21:23] "GET /accounts/login/ HTTP/1.0" 200 4372
-[25/Dec/2024 18:36:58] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 18:36:58] "GET / HTTP/1.0" 302 0
-Not Found: /wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:36:58] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+[25/Dec/2024 22:00:11] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 22:02:27] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:02:27] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 22:16:28] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:16:29] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 22:35:06] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 22:35:06] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 22:35:20] "POST /accounts/login/ HTTP/1.0" 302 0
+[25/Dec/2024 22:35:20] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 22:35:20] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[25/Dec/2024 22:35:26] "GET /events/ HTTP/1.0" 200 4415
+[25/Dec/2024 22:35:27] "GET /events/add/ HTTP/1.0" 200 12457
+[25/Dec/2024 22:35:31] "GET /events/add/ HTTP/1.0" 200 12457
+[25/Dec/2024 22:35:40] "GET / HTTP/1.0" 200 5459
+[25/Dec/2024 22:35:40] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[25/Dec/2024 23:12:43] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/ID3/license.txt
+[25/Dec/2024 23:12:44] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /feed/
+[25/Dec/2024 23:12:44] "GET /feed/ HTTP/1.0" 404 2980
 Not Found: /xmlrpc.php
-[25/Dec/2024 18:36:59] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
-[25/Dec/2024 18:36:59] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 23:12:44] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
 Not Found: /blog/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:36:59] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:44] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /web/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:36:59] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 23:12:45] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /wordpress/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:36:59] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
-Not Found: /website/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:36:59] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+[25/Dec/2024 23:12:45] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
 Not Found: /wp/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:00] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
-Not Found: /news/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:00] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:45] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
 Not Found: /2020/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:00] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:45] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /2019/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:00] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:46] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[25/Dec/2024 23:12:46] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /shop/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:00] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:46] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /wp1/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 23:12:46] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /test/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
-Not Found: /wp2/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 23:12:47] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /site/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[25/Dec/2024 23:12:47] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /cms/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
-Not Found: /sito/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:37:01] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
-[25/Dec/2024 18:37:45] "GET / HTTP/1.0" 200 5459
-[25/Dec/2024 18:37:45] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 67
-[25/Dec/2024 18:42:46] "GET /employees/ HTTP/1.0" 200 5366
-[25/Dec/2024 18:42:51] "GET /employees/add/ HTTP/1.0" 200 5658
-[25/Dec/2024 18:43:03] "GET /employees/ HTTP/1.0" 200 5366
-[25/Dec/2024 18:48:33] "GET / HTTP/1.1" 302 0
-[25/Dec/2024 18:48:33] "GET /accounts/login/ HTTP/1.1" 200 4372
-[25/Dec/2024 18:53:44] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 18:53:44] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 23:12:47] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[25/Dec/2024 23:14:47] "GET / HTTP/1.0" 302 0
+[25/Dec/2024 23:14:47] "GET /accounts/login/ HTTP/1.0" 200 4372
+[25/Dec/2024 23:32:40] "GET / HTTP/1.0" 302 0
+Not Found: /wp-login.php
+[25/Dec/2024 23:41:53] "GET /wp-login.php HTTP/1.0" 404 3001
+[26/Dec/2024 00:34:23] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:34:23] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 00:39:09] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:39:11] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 00:43:17] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:43:17] "GET / HTTP/1.0" 302 0
 Not Found: /wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:44] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+[26/Dec/2024 00:43:17] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
 Not Found: /xmlrpc.php
-[25/Dec/2024 18:53:45] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
-[25/Dec/2024 18:53:45] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:43:18] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 00:43:18] "GET / HTTP/1.0" 302 0
 Not Found: /blog/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:45] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:18] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /web/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:45] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 00:43:18] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /wordpress/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:45] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+[26/Dec/2024 00:43:18] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
 Not Found: /website/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:45] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+[26/Dec/2024 00:43:18] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
 Not Found: /wp/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+[26/Dec/2024 00:43:19] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
 Not Found: /news/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:19] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /2020/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:19] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /2019/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:19] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /shop/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:19] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /wp1/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 00:43:20] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /test/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:46] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:20] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /wp2/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:47] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 00:43:20] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /site/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:47] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:43:20] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
 Not Found: /cms/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:47] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 00:43:20] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
 Not Found: /sito/wp-includes/wlwmanifest.xml
-[25/Dec/2024 18:53:47] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
-[25/Dec/2024 19:17:42] "GET / HTTP/1.0" 302 0
-[25/Dec/2024 19:17:42] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 00:43:20] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 00:52:40] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:52:40] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 00:52:47] "POST /accounts/login/ HTTP/1.0" 302 0
+[26/Dec/2024 00:52:47] "GET / HTTP/1.0" 200 5459
+[26/Dec/2024 00:52:47] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 00:52:50] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 00:52:50] "GET /events/calendar-events/?start=2025-01-26T00%3A00%3A00%2B01%3A00&end=2025-03-09T00%3A00%3A00Z HTTP/1.0" 200 2
+[26/Dec/2024 00:52:51] "GET /events/calendar-events/?start=2024-12-29T00%3A00%3A00%2B01%3A00&end=2025-02-09T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 00:52:51] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 00:52:58] "GET /employees/ HTTP/1.0" 200 4454
+[26/Dec/2024 00:53:00] "GET /employees/add/ HTTP/1.0" 200 5799
+[26/Dec/2024 00:53:14] "GET /employees/ HTTP/1.0" 200 4454
+[26/Dec/2024 00:53:18] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 00:53:18] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:19] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 00:53:19] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 00:53:19] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:19] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:19] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:19] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:20] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 00:53:21] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 01:00:26] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 01:00:26] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:26] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 01:00:26] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 01:00:26] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:26] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:27] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:28] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:00:29] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 01:43:12] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 01:43:13] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:13] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 01:43:13] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 01:43:13] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:13] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:13] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:13] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:14] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 01:43:15] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 01:48:01] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 01:48:01] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 01:48:09] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 01:48:09] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 01:49:04] "GET / HTTP/1.1" 302 0
+[26/Dec/2024 01:49:04] "GET /accounts/login/ HTTP/1.1" 200 4372
+[26/Dec/2024 01:49:04] "GET /static/images/favicon.ico HTTP/1.1" 200 15406
+[26/Dec/2024 02:06:38] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 02:06:39] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 02:09:01] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 02:09:01] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 02:09:01] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 02:09:01] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:01] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 02:09:02] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 02:23:06] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 02:23:06] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 02:28:11] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 02:29:43] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 02:29:51] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /merchant/z/payment/
+[26/Dec/2024 02:40:04] "GET /merchant/z/payment/?order=1 HTTP/1.0" 404 3030
+Not Found: /3ds1633693954432212
+[26/Dec/2024 02:40:49] "GET /3ds1633693954432212 HTTP/1.0" 404 3022
+Not Found: /3ds.php
+[26/Dec/2024 02:41:25] "GET /3ds.php HTTP/1.0" 404 2986
+Not Found: /merchant/code
+[26/Dec/2024 02:42:01] "GET /merchant/code HTTP/1.0" 404 3004
+[26/Dec/2024 03:10:22] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 03:10:22] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /.git/config
+[26/Dec/2024 03:13:12] "GET /.git/config HTTP/1.0" 404 2998
+[26/Dec/2024 03:15:39] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 03:15:39] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:39] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 03:15:39] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 03:15:40] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:40] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:41] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:42] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:42] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 03:15:42] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 03:32:22] "GET / HTTP/1.0" 302 0
+Not Found: /.env
+[26/Dec/2024 03:32:22] "GET /.env HTTP/1.0" 404 2971
+[26/Dec/2024 03:32:22] "POST / HTTP/1.0" 302 0
+[26/Dec/2024 04:21:39] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 04:21:40] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 05:19:06] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 05:44:00] "HEAD / HTTP/1.0" 302 0
+[26/Dec/2024 05:44:00] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 05:44:00] "HEAD /accounts/login/ HTTP/1.0" 200 0
+[26/Dec/2024 05:44:00] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 05:44:00] "HEAD /events/ HTTP/1.0" 302 0
+[26/Dec/2024 05:44:00] "GET /events/ HTTP/1.0" 302 0
+[26/Dec/2024 05:44:01] "HEAD /client/customer-list/ HTTP/1.0" 302 0
+[26/Dec/2024 05:44:01] "GET /client/customer-list/ HTTP/1.0" 302 0
+[26/Dec/2024 05:44:01] "HEAD /materials/ HTTP/1.0" 302 0
+[26/Dec/2024 05:44:01] "GET /materials/ HTTP/1.0" 302 0
+[26/Dec/2024 06:08:14] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 07:10:51] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 07:10:52] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 07:14:23] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 07:14:24] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 07:42:32] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 07:42:32] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 08:32:57] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 08:32:58] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 08:32:58] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 08:32:58] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:58] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:32:59] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 08:33:00] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 08:40:24] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 08:40:24] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 08:52:44] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 08:52:44] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 08:52:53] "POST /accounts/login/ HTTP/1.0" 302 0
+[26/Dec/2024 08:52:53] "GET / HTTP/1.0" 200 5459
+[26/Dec/2024 08:52:53] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 08:53:00] "GET /employees/ HTTP/1.0" 200 4454
+[26/Dec/2024 09:08:57] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 09:08:57] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:57] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 09:08:57] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 09:08:57] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:58] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:08:59] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:09:00] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:09:00] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 09:09:00] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 09:13:13] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 09:13:13] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 10:04:46] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 11:00:03] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 11:00:03] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/ID3/license.txt
+[26/Dec/2024 11:00:03] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /wp-includes/ID3/license.txt
+[26/Dec/2024 11:00:03] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /feed/
+Not Found: /feed/
+[26/Dec/2024 11:00:04] "GET /feed/ HTTP/1.0" 404 2980
+[26/Dec/2024 11:00:04] "GET /feed/ HTTP/1.0" 404 2980
+Not Found: /xmlrpc.php
+Not Found: /xmlrpc.php
+[26/Dec/2024 11:00:04] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 11:00:04] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:04] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:04] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:04] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:04] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+[26/Dec/2024 11:00:05] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:05] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:06] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:07] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:00:07] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 11:03:15] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 11:03:15] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 11:19:18] code 400, message Bad request version ('À\x13À')
+[26/Dec/2024 11:19:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+[26/Dec/2024 11:19:18] code 400, message Bad request version ('À(À$À\x14À')
+[26/Dec/2024 11:19:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /.git/config
+[26/Dec/2024 11:29:39] "GET /.git/config HTTP/1.0" 404 2998
+[26/Dec/2024 11:50:29] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 11:50:29] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:29] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 11:50:29] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 11:50:30] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:30] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:30] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:30] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:30] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:30] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:31] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:32] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:32] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 11:50:32] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 12:06:27] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 12:06:28] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3079
+Not Found: /apple-touch-icon-120x120.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3043
+Not Found: /apple-touch-icon-precomposed.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3055
+Not Found: /apple-touch-icon.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon.png HTTP/1.0" 404 3019
 Not Found: /favicon.ico
-[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
+[26/Dec/2024 12:06:28] "GET /favicon.ico HTTP/1.0" 404 2992
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3079
+Not Found: /apple-touch-icon-120x120.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3043
+Not Found: /apple-touch-icon-precomposed.png
+[26/Dec/2024 12:06:28] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3055
+Not Found: /apple-touch-icon.png
+[26/Dec/2024 12:06:29] "GET /apple-touch-icon.png HTTP/1.0" 404 3019
 Not Found: /favicon.ico
-[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
-Not Found: /favicon.ico
-[25/Dec/2024 19:17:42] "GET /favicon.ico HTTP/1.0" 404 2992
-Not Found: /login.rsp
-[25/Dec/2024 19:17:42] "GET /login.rsp HTTP/1.0" 404 2986
-Not Found: /device.rsp
-[25/Dec/2024 19:17:42] "GET /device.rsp?opt=user&cmd=list HTTP/1.0" 404 3011
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:43] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3194
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:43] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3199
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:44] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22asdf1234%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:46] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22abc12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:46] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3199
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:17:47] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345abc%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.0" 404 3197
-[25/Dec/2024 19:18:05] "GET / HTTP/1.1" 302 0
-[25/Dec/2024 19:18:05] "GET /accounts/login/ HTTP/1.1" 200 4372
-Not Found: /favicon.ico
-[25/Dec/2024 19:18:05] "GET /favicon.ico HTTP/1.1" 404 2996
-Not Found: /favicon.ico
-[25/Dec/2024 19:18:05] "GET /favicon.ico HTTP/1.1" 404 2996
-Not Found: /favicon.ico
-[25/Dec/2024 19:18:06] "GET /favicon.ico HTTP/1.1" 404 2996
-Not Found: /login.rsp
-[25/Dec/2024 19:18:06] "GET /login.rsp HTTP/1.1" 404 2990
-Not Found: /device.rsp
-[25/Dec/2024 19:18:06] "GET /device.rsp?opt=user&cmd=list HTTP/1.1" 404 3015
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3198
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22admin12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3203
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22asdf1234%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%22abc12345%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345admin%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3203
-Not Found: /cgi-bin/gw.cgi
-[25/Dec/2024 19:18:06] "GET /cgi-bin/gw.cgi?xml=%3Cjuan%20ver=%22%22%20squ=%22%22%20dir=%220%22%3E%3Crpermission%20usr=%22admin%22%20pwd=%2212345abc%22%3E%3Cconfig%20base=%22%22/%3E%3Cplayback%20base=%22%22/%3E%3C/rpermission%3E%3C/juan%3E HTTP/1.1" 404 3201
+[26/Dec/2024 12:06:29] "GET /favicon.ico HTTP/1.0" 404 2992
+[26/Dec/2024 12:26:48] "GET / HTTP/1.0" 302 0
+Not Found: /license.txt
+[26/Dec/2024 12:33:24] "GET /license.txt HTTP/1.0" 404 2998
+Not Found: /readme.html
+[26/Dec/2024 12:33:24] "GET /readme.html HTTP/1.0" 404 2998
+[26/Dec/2024 12:33:24] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 12:33:24] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 12:42:30] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 12:44:05] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/ID3/license.txt
+[26/Dec/2024 12:44:05] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /feed/
+[26/Dec/2024 12:44:05] "GET /feed/ HTTP/1.0" 404 2980
+Not Found: /xmlrpc.php
+[26/Dec/2024 12:44:05] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:06] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:06] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:06] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:06] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:06] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:07] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 12:44:08] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[26/Dec/2024 13:25:57] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 13:25:57] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 13:25:58] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 13:25:58] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:25:58] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 13:41:07] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 13:41:08] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:08] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 13:41:08] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 13:41:08] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:08] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:08] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:09] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:09] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:09] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:09] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:09] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:10] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:10] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:10] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:10] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:10] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:11] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:11] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:41:11] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 13:42:09] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 13:42:09] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:09] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 13:42:09] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 13:42:10] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:10] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:10] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:10] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:10] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:11] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:12] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:12] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:12] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:12] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:42:12] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 13:50:24] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 13:50:25] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3085
+Not Found: /apple-touch-icon-120x120.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3049
+Not Found: /apple-touch-icon-precomposed.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3061
+Not Found: /apple-touch-icon.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon.png HTTP/1.0" 404 3025
+Not Found: /apple-touch-icon-120x120-precomposed.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.0" 404 3085
+Not Found: /apple-touch-icon-120x120.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-120x120.png HTTP/1.0" 404 3049
+Not Found: /apple-touch-icon-precomposed.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon-precomposed.png HTTP/1.0" 404 3061
+Not Found: /apple-touch-icon.png
+[26/Dec/2024 13:50:25] "GET /apple-touch-icon.png HTTP/1.0" 404 3025
+[26/Dec/2024 13:55:04] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 13:55:04] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:04] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 13:55:04] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 13:55:04] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:05] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:06] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:07] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 13:55:07] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 14:03:47] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:03:52] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 14:04:07] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:04:22] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:04:29] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 14:18:56] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:19:12] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:19:18] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 14:28:48] "GET / HTTP/1.0" 200 5459
+[26/Dec/2024 14:28:48] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 14:30:38] "GET /events/ HTTP/1.0" 200 4415
+[26/Dec/2024 14:30:49] "GET /employees/ HTTP/1.0" 200 4454
+[26/Dec/2024 14:30:50] "GET /employees/add/ HTTP/1.0" 200 5799
+[26/Dec/2024 14:32:17] "POST /employees/add/ HTTP/1.0" 200 6028
+[26/Dec/2024 14:33:06] "POST /employees/add/ HTTP/1.0" 302 0
+[26/Dec/2024 14:33:06] "GET /employees/ HTTP/1.0" 200 4854
+[26/Dec/2024 14:33:07] "GET /employees/add/ HTTP/1.0" 200 5799
+[26/Dec/2024 14:33:36] "POST /employees/add/ HTTP/1.0" 302 0
+[26/Dec/2024 14:33:36] "GET /employees/ HTTP/1.0" 200 5378
+[26/Dec/2024 14:33:45] "GET /employees/add/ HTTP/1.0" 200 5799
+[26/Dec/2024 14:34:31] "POST /employees/add/ HTTP/1.0" 302 0
+[26/Dec/2024 14:34:31] "GET /employees/ HTTP/1.0" 200 5898
+[26/Dec/2024 14:34:34] "GET /employees/add/ HTTP/1.0" 200 5799
+[26/Dec/2024 14:35:17] "POST /employees/add/ HTTP/1.0" 302 0
+[26/Dec/2024 14:35:18] "GET /employees/ HTTP/1.0" 200 6414
+[26/Dec/2024 14:35:50] "GET / HTTP/1.0" 200 5459
+[26/Dec/2024 14:35:50] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 14:35:53] "GET /events/ HTTP/1.0" 200 4415
+[26/Dec/2024 14:35:54] "GET /events/add/ HTTP/1.0" 200 12724
+[26/Dec/2024 14:36:15] "GET /accounts/logout/ HTTP/1.0" 302 0
+[26/Dec/2024 14:36:15] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 14:48:31] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 14:48:31] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /28kxhS
+[26/Dec/2024 15:01:34] "GET /28kxhS HTTP/1.0" 404 2983
+Not Found: /zMmL28CN
+[26/Dec/2024 15:02:10] "GET /zMmL28CN HTTP/1.0" 404 2989
+Not Found: /fpyB8SZ3
+[26/Dec/2024 15:02:46] "GET /fpyB8SZ3 HTTP/1.0" 404 2989
+Not Found: /sberbank-quiz-v2/
+[26/Dec/2024 15:03:22] "GET /sberbank-quiz-v2/ HTTP/1.0" 404 3016
+Not Found: /lander/sberchat5v4_tds_newcrm_038-vnutr_1721815245/index.php
+[26/Dec/2024 15:04:16] "GET /lander/sberchat5v4_tds_newcrm_038-vnutr_1721815245/index.php HTTP/1.0" 404 3145
+[26/Dec/2024 15:04:52] "GET /?utm_campaign=PB-SBERAN HTTP/1.0" 302 0
+[26/Dec/2024 15:04:52] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /n6PdMqLz
+[26/Dec/2024 15:04:53] "GET /n6PdMqLz HTTP/1.0" 404 2989
+Not Found: /lander/sberquiz-2223-3
+[26/Dec/2024 15:05:29] "GET /lander/sberquiz-2223-3 HTTP/1.0" 404 3031
+Not Found: /6bXX29bt
+[26/Dec/2024 15:06:05] "GET /6bXX29bt HTTP/1.0" 404 2989
+Not Found: /262LBNFp
+[26/Dec/2024 15:06:41] "GET /262LBNFp HTTP/1.0" 404 2989
+Not Found: /lander/sberchat5v4_tds_newcrm_028-vnutr/index.php
+[26/Dec/2024 15:07:26] "GET /lander/sberchat5v4_tds_newcrm_028-vnutr/index.php HTTP/1.0" 404 3112
+Not Found: /lander/sber-fix/
+[26/Dec/2024 15:08:03] "GET /lander/sber-fix/ HTTP/1.0" 404 3013
+Not Found: /lander/testsberv4-copy--1/
+[26/Dec/2024 15:08:39] "GET /lander/testsberv4-copy--1/ HTTP/1.0" 404 3043
+Not Found: /sberbank-quiz-4
+[26/Dec/2024 15:09:24] "GET /sberbank-quiz-4 HTTP/1.0" 404 3010
+Not Found: /Kd67Fq1x
+[26/Dec/2024 15:10:00] "GET /Kd67Fq1x HTTP/1.0" 404 2989
+Not Found: /gpLFR5sr
+[26/Dec/2024 15:10:36] "GET /gpLFR5sr HTTP/1.0" 404 2989
+Not Found: /n5cw4Z3Y
+[26/Dec/2024 15:11:13] "GET /n5cw4Z3Y HTTP/1.0" 404 2989
+Not Found: /5jshCV
+[26/Dec/2024 15:11:49] "GET /5jshCV HTTP/1.0" 404 2983
+Not Found: /n4TWwtZ4
+[26/Dec/2024 15:12:25] "GET /n4TWwtZ4 HTTP/1.0" 404 2989
+Not Found: /tink_chat/
+[26/Dec/2024 15:13:01] "GET /tink_chat/ HTTP/1.0" 404 2995
+Not Found: /lander/sber/
+[26/Dec/2024 15:13:46] "GET /lander/sber/ HTTP/1.0" 404 3001
+Not Found: /KLFzmbdm
+[26/Dec/2024 15:14:22] "GET /KLFzmbdm HTTP/1.0" 404 2989
+Not Found: /sberchat008-prilca/
+[26/Dec/2024 15:15:07] "GET /sberchat008-prilca/ HTTP/1.0" 404 3022
+[26/Dec/2024 15:15:43] "GET /?&utm_source=Rent5SBER HTTP/1.0" 302 0
+[26/Dec/2024 15:15:43] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /cabinet
+[26/Dec/2024 15:15:44] "GET /cabinet HTTP/1.0" 404 2986
+Not Found: /q1gpDhK4
+[26/Dec/2024 15:16:20] "GET /q1gpDhK4 HTTP/1.0" 404 2989
+Not Found: /YRWnWHy7
+[26/Dec/2024 15:16:56] "GET /YRWnWHy7 HTTP/1.0" 404 2989
+[26/Dec/2024 15:17:28] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 15:17:28] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:28] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 15:17:28] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 15:17:28] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:29] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:29] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:29] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:29] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:29] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:30] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:31] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:31] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:31] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:17:31] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /NWJs6k27
+[26/Dec/2024 15:17:41] "GET /NWJs6k27 HTTP/1.0" 404 2989
+Not Found: /3vt4yTCT
+[26/Dec/2024 15:18:27] "GET /3vt4yTCT HTTP/1.0" 404 2989
+Not Found: /sbr
+[26/Dec/2024 15:19:03] "GET /sbr HTTP/1.0" 404 2974
+[26/Dec/2024 15:36:28] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 15:36:28] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:28] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 15:36:29] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 15:36:29] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:29] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:29] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:29] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:29] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:30] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:31] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:31] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:31] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:31] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:36:31] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 15:44:13] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 15:44:13] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 15:44:46] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 15:44:46] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:46] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 15:44:46] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 15:44:46] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:46] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:47] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:48] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:49] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 15:44:49] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /.git/config
+[26/Dec/2024 15:56:53] "GET /.git/config HTTP/1.0" 404 3002
+[26/Dec/2024 16:12:26] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 16:13:36] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 16:13:37] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:37] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 16:13:37] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 16:13:37] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:38] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:38] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:38] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:39] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:39] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:39] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:39] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:39] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:40] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:41] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:41] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:42] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:42] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:43] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:43] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 16:13:47] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 16:13:48] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:48] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 16:13:48] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 16:13:48] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:48] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:49] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:49] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:49] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:49] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:50] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:51] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:51] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:51] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:51] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:51] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:52] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:52] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:52] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:13:52] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 16:14:41] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 16:14:41] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 16:14:41] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 16:14:42] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:42] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:42] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:42] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:42] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:43] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:43] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:44] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:44] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:44] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:45] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:45] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:45] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:45] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:46] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 16:14:46] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 16:39:25] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 16:39:29] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /.git/config
+[26/Dec/2024 16:45:24] "GET /.git/config HTTP/1.0" 404 2992
+[26/Dec/2024 17:35:27] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 17:47:21] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 17:47:21] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:21] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 17:47:21] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 17:47:21] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:21] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:22] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:23] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:47:24] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 17:56:40] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 17:56:40] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:40] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 17:56:40] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 17:56:40] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:40] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:40] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:40] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:40] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 17:56:41] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 18:00:54] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 18:06:38] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 18:06:38] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:38] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 18:06:39] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 18:06:39] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:39] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:39] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:39] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:39] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:39] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:40] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:41] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:41] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:41] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:06:41] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 18:09:49] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 18:09:49] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:49] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 18:09:49] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 18:09:49] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:49] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:50] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:51] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:52] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:09:52] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 18:17:56] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 18:17:57] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:57] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 18:17:57] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 18:17:57] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:57] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:57] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:58] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 18:17:59] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 18:35:35] "GET / HTTP/1.1" 302 0
+[26/Dec/2024 18:35:35] "GET /accounts/login/ HTTP/1.1" 200 4372
+[26/Dec/2024 19:17:53] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 19:17:53] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 19:18:09] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 19:18:35] "POST /accounts/login/ HTTP/1.0" 302 0
+[26/Dec/2024 19:18:35] "GET / HTTP/1.0" 200 5459
+[26/Dec/2024 19:18:36] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[26/Dec/2024 19:18:42] "GET /events/ HTTP/1.0" 200 4415
+[26/Dec/2024 19:18:46] "GET /events/add/ HTTP/1.0" 200 12724
+[26/Dec/2024 19:18:56] "GET /events/ HTTP/1.0" 200 4415
+[26/Dec/2024 19:19:12] "GET /employees/ HTTP/1.0" 200 6414
+[26/Dec/2024 19:19:19] "GET /events/ HTTP/1.0" 200 4415
+[26/Dec/2024 19:19:30] "GET /accounts/logout/ HTTP/1.0" 302 0
+[26/Dec/2024 19:19:30] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 19:44:39] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 19:58:36] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 21:05:31] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 21:05:31] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:31] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 21:05:31] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 21:05:31] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:31] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:31] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:31] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:31] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:32] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:33] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:33] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:05:33] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 21:08:32] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 21:08:32] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 21:08:32] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 21:08:32] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:32] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 21:08:33] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 21:31:55] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 21:31:55] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 22:24:41] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 22:24:41] "GET /accounts/login/ HTTP/1.0" 200 4372
+[26/Dec/2024 23:00:20] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 23:00:20] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[26/Dec/2024 23:00:20] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[26/Dec/2024 23:00:20] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[26/Dec/2024 23:00:20] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[26/Dec/2024 23:17:49] "GET / HTTP/1.0" 302 0
+[26/Dec/2024 23:17:51] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /cgi-bin/luci/;stok=/locale
+[26/Dec/2024 23:36:20] "GET /cgi-bin/luci/;stok=/locale HTTP/1.0" 404 3041
+[27/Dec/2024 00:19:32] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 00:19:32] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 00:42:55] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 00:42:55] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 01:02:17] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 03:20:41] "GET / HTTP/1.0" 302 0
+Not Found: /3ds.php
+[27/Dec/2024 03:51:01] "GET /3ds.php HTTP/1.0" 404 2986
+Not Found: /merchant/z/payment/
+[27/Dec/2024 03:51:37] "GET /merchant/z/payment/?order=1 HTTP/1.0" 404 3030
+Not Found: /3ds1633693954432212
+[27/Dec/2024 03:52:13] "GET /3ds1633693954432212 HTTP/1.0" 404 3022
+Not Found: /merchant/code
+[27/Dec/2024 03:52:49] "GET /merchant/code HTTP/1.0" 404 3004
+[27/Dec/2024 04:12:48] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 04:35:00] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 04:35:04] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 05:16:11] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 05:16:11] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /wp-admin/setup-config.php
+[27/Dec/2024 06:27:16] "GET /wp-admin/setup-config.php?step=1 HTTP/1.0" 404 3047
+Not Found: /wordpress/wp-admin/setup-config.php
+[27/Dec/2024 06:27:16] "GET /wordpress/wp-admin/setup-config.php?step=1 HTTP/1.0" 404 3077
+[27/Dec/2024 06:36:26] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 07:07:09] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 07:07:10] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 07:21:42] "HEAD / HTTP/1.0" 302 0
+[27/Dec/2024 07:21:43] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 07:21:44] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 07:21:44] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 08:03:33] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 08:03:33] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 08:03:47] "POST /accounts/login/ HTTP/1.0" 302 0
+[27/Dec/2024 08:03:47] "GET / HTTP/1.0" 200 5459
+[27/Dec/2024 08:03:47] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[27/Dec/2024 08:04:01] "GET /client/customer-list/ HTTP/1.0" 200 5114
+[27/Dec/2024 08:04:13] "GET /employees/ HTTP/1.0" 200 6414
+[27/Dec/2024 08:04:33] "GET /materials/ HTTP/1.0" 200 4359
+[27/Dec/2024 08:04:36] "GET /client/customer-list/ HTTP/1.0" 200 5114
+[27/Dec/2024 08:04:39] "GET /materials/ HTTP/1.0" 200 4359
+[27/Dec/2024 08:04:40] "GET /employees/ HTTP/1.0" 200 6414
+[27/Dec/2024 08:04:42] "GET /client/customer-list/ HTTP/1.0" 200 5114
+[27/Dec/2024 08:04:44] "GET /events/ HTTP/1.0" 200 4415
+[27/Dec/2024 08:04:56] "GET / HTTP/1.0" 200 5459
+[27/Dec/2024 08:04:56] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[27/Dec/2024 08:11:58] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 08:11:58] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 08:36:16] "GET / HTTP/1.0" 200 5459
+[27/Dec/2024 08:36:18] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[27/Dec/2024 08:46:15] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 09:09:14] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 09:09:14] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /wp-includes/js/jquery/jquery.js
+[27/Dec/2024 09:20:48] "GET /wp-includes/js/jquery/jquery.js HTTP/1.0" 404 3062
+[27/Dec/2024 09:40:33] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 09:40:33] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 10:58:48] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 10:58:48] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 11:03:14] "GET / HTTP/1.0" 302 0
+Not Found: /license.txt
+[27/Dec/2024 12:20:09] "GET /license.txt HTTP/1.0" 404 2998
+Not Found: /readme.html
+[27/Dec/2024 12:20:09] "GET /readme.html HTTP/1.0" 404 2998
+[27/Dec/2024 12:20:09] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 12:20:09] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /robots.txt
+[27/Dec/2024 12:58:36] "GET /robots.txt HTTP/1.0" 404 2999
+Not Found: /robots.txt
+[27/Dec/2024 12:58:37] "GET /robots.txt HTTP/1.0" 404 2995
+Not Found: /robots.txt
+[27/Dec/2024 12:58:37] "GET /robots.txt HTTP/1.0" 404 2995
+Not Found: /sitemaps.xml
+[27/Dec/2024 12:58:44] "GET /sitemaps.xml HTTP/1.0" 404 3001
+Not Found: /sitemap_index.xml
+[27/Dec/2024 12:58:44] "GET /sitemap_index.xml HTTP/1.0" 404 3016
+Not Found: /sitemaps.xml
+[27/Dec/2024 12:58:45] "GET /sitemaps.xml HTTP/1.0" 404 3005
+Not Found: /sitemap_index.xml
+[27/Dec/2024 12:58:45] "GET /sitemap_index.xml HTTP/1.0" 404 3020
+Not Found: /sitemap.xml
+[27/Dec/2024 12:58:48] "GET /sitemap.xml HTTP/1.0" 404 2998
+Not Found: /sitemap.xml
+[27/Dec/2024 12:58:48] "GET /sitemap.xml HTTP/1.0" 404 3002
+Not Found: /sitemap.txt
+[27/Dec/2024 12:58:48] "GET /sitemap.txt HTTP/1.0" 404 2998
+Not Found: /atom.xml
+[27/Dec/2024 12:58:48] "GET /atom.xml HTTP/1.0" 404 2989
+Not Found: /sitemap.xml.gz
+[27/Dec/2024 12:58:48] "GET /sitemap.xml.gz HTTP/1.0" 404 3011
+Not Found: /sitemap.xml.gz
+[27/Dec/2024 12:58:49] "GET /sitemap.xml.gz HTTP/1.0" 404 3007
+Not Found: /sitemap.txt
+[27/Dec/2024 12:58:49] "GET /sitemap.txt HTTP/1.0" 404 3002
+Not Found: /atom.xml
+[27/Dec/2024 12:58:49] "GET /atom.xml HTTP/1.0" 404 2993
+[27/Dec/2024 13:10:17] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 13:10:17] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 13:56:41] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 13:56:41] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 14:02:03] "GET /events/ HTTP/1.0" 200 4415
+[27/Dec/2024 14:02:08] "GET /events/add/ HTTP/1.0" 200 12724
+[27/Dec/2024 14:30:33] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 14:48:45] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 14:48:45] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:46] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 14:48:46] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 14:48:46] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:46] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:48] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:48] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:48] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:48] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:49] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:49] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:49] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:49] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:49] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:50] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:50] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:50] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:50] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 14:48:50] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 14:59:55] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 15:03:33] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 15:03:34] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:34] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 15:03:34] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 15:03:34] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:34] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:34] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:35] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:35] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:35] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:35] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:35] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:36] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:37] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:03:37] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 15:05:41] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 15:05:41] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 15:05:42] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 15:05:42] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:42] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:42] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:42] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:42] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:43] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:44] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:44] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:44] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:44] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 15:05:44] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 15:50:57] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 15:50:57] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 15:59:57] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 15:59:57] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 16:05:04] "GET / HTTP/1.1" 302 0
+[27/Dec/2024 16:05:04] "GET /accounts/login/ HTTP/1.1" 200 4372
+[27/Dec/2024 16:29:29] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 16:29:30] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:30] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 16:29:30] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 16:29:30] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:30] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:31] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:32] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:32] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:32] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:32] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:32] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:33] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:33] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 16:29:33] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 16:58:31] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 16:58:32] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 17:02:33] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 17:02:33] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:34] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 17:02:34] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 17:02:34] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:34] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:34] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[27/Dec/2024 17:02:34] "HEAD / HTTP/1.0" 302 0
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:34] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:35] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:35] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:35] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:35] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:35] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[27/Dec/2024 17:02:36] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 17:02:36] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /accounts/login/ads.txt
+[27/Dec/2024 17:02:36] "GET /accounts/login/ads.txt HTTP/1.0" 404 3276
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /accounts/login/app-ads.txt
+[27/Dec/2024 17:02:36] "GET /accounts/login/app-ads.txt HTTP/1.0" 404 3288
+Not Found: /accounts/login/sellers.json
+[27/Dec/2024 17:02:36] "GET /accounts/login/sellers.json HTTP/1.0" 404 3291
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:36] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:02:37] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 17:04:36] "HEAD / HTTP/1.0" 302 0
+[27/Dec/2024 17:04:37] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 17:04:37] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /accounts/login/ads.txt
+[27/Dec/2024 17:04:37] "GET /accounts/login/ads.txt HTTP/1.0" 404 3276
+Not Found: /accounts/login/app-ads.txt
+[27/Dec/2024 17:04:37] "GET /accounts/login/app-ads.txt HTTP/1.0" 404 3288
+Not Found: /accounts/login/sellers.json
+[27/Dec/2024 17:04:37] "GET /accounts/login/sellers.json HTTP/1.0" 404 3291
+[27/Dec/2024 17:10:40] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 17:10:41] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 17:10:41] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 17:10:41] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:41] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:41] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:42] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 17:10:43] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 18:05:03] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 18:31:59] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 18:59:49] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 19:02:41] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 20:40:16] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 20:40:16] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:16] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 20:40:16] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 20:40:16] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:16] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:16] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:16] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:40:17] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 20:58:03] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 20:58:03] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 20:58:03] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 20:58:03] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:03] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 20:58:04] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 21:17:10] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 21:17:10] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:10] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 21:17:10] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 21:17:10] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:10] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:10] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:10] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:11] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 21:17:12] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 21:39:26] "GET / HTTP/1.0" 302 0
+Not Found: /www.baidu.com:443
+[27/Dec/2024 21:42:55] "CONNECT www.baidu.com:443 HTTP/1.0" 404 1799
+[27/Dec/2024 22:13:04] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 22:13:05] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /.git/config
+[27/Dec/2024 22:17:53] "GET /.git/config HTTP/1.0" 404 2992
+[27/Dec/2024 22:18:44] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 22:18:45] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 22:23:14] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 22:23:14] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:14] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[27/Dec/2024 22:23:15] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[27/Dec/2024 22:23:16] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:17] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:17] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:18] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:18] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:20] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:21] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:51] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:51] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:52] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:53] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:54] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:54] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:56] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:56] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:56] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[27/Dec/2024 22:23:57] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[27/Dec/2024 23:14:43] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/ID3/license.txt
+[27/Dec/2024 23:14:43] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /feed/
+[27/Dec/2024 23:14:43] "GET /feed/ HTTP/1.0" 404 2980
+Not Found: /xmlrpc.php
+[27/Dec/2024 23:14:44] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:44] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:44] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:45] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:45] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:46] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:46] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:47] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:47] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:47] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:48] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /site/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:48] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[27/Dec/2024 23:14:48] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[27/Dec/2024 23:39:52] "GET / HTTP/1.0" 302 0
+[27/Dec/2024 23:39:52] "GET /accounts/login/ HTTP/1.0" 200 4372
+[27/Dec/2024 23:41:26] "GET / HTTP/1.0" 302 0
+Not Found: /merchant/code
+[27/Dec/2024 23:47:09] "GET /merchant/code HTTP/1.0" 404 3004
+Not Found: /3ds1633693954432212
+[27/Dec/2024 23:47:45] "GET /3ds1633693954432212 HTTP/1.0" 404 3022
+Not Found: /merchant/z/payment/
+[27/Dec/2024 23:48:21] "GET /merchant/z/payment/?order=1 HTTP/1.0" 404 3030
+Not Found: /3ds.php
+[27/Dec/2024 23:48:57] "GET /3ds.php HTTP/1.0" 404 2986
+[28/Dec/2024 01:09:24] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 01:09:24] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 01:54:09] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 02:24:24] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 02:24:25] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /.env
+[28/Dec/2024 03:23:45] "GET /.env HTTP/1.0" 404 2971
+Not Found: /wp-login.php
+[28/Dec/2024 03:52:23] "GET /wp-login.php HTTP/1.0" 404 3001
+[28/Dec/2024 03:54:12] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 04:26:22] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 04:26:22] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:23] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 04:26:23] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 04:26:23] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:23] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:23] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:23] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:23] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:24] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:25] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:25] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:25] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:25] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:26:25] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 04:41:20] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 04:41:20] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:20] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 04:41:21] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 04:41:21] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:21] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:21] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:21] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:21] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:21] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:22] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:23] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:23] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:23] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 04:41:23] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 04:46:55] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 04:46:59] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 05:01:06] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 05:01:06] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:06] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 05:01:06] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 05:01:07] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:07] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:07] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:07] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:07] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:07] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:08] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:09] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:09] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:09] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 05:01:09] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 06:05:58] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 06:05:58] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:05:58] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 06:05:59] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 06:05:59] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:05:59] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:05:59] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:05:59] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:05:59] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:00] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:01] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:01] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:01] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:06:01] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 06:43:31] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 06:51:57] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 06:51:57] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:57] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 06:51:57] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 06:51:58] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:58] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:58] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:58] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:58] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:58] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:51:59] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:52:00] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:52:00] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 06:52:00] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 07:10:11] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 07:10:11] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:11] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 07:10:12] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 07:10:12] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:12] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:12] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:12] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:12] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:13] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:14] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:14] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:14] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:14] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:14] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 07:10:35] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 07:10:35] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:35] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 07:10:35] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 07:10:36] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2018/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /2018/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:36] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /media/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /media/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3064
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 07:10:37] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 07:12:30] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 07:12:31] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 07:17:16] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 07:17:18] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 07:17:18] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 07:51:13] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[28/Dec/2024 07:51:13] "    c                           " 400 -
+[28/Dec/2024 07:51:17] code 400, message Bad request syntax ('\xa0\x00\x00`\x00\x00\x00\x00admin\x00\x00\x00admin\x00\x00\x00\x04\x01\x00\x00\x00\x00¡ª')
+[28/Dec/2024 07:51:17] "   `    admin   admin       ¡ª" 400 -
+Not Found: /sitemaps.xml
+[28/Dec/2024 09:24:29] "GET /sitemaps.xml HTTP/1.0" 404 3001
+Not Found: /sitemap_index.xml
+[28/Dec/2024 09:24:29] "GET /sitemap_index.xml HTTP/1.0" 404 3016
+Not Found: /sitemap.xml
+[28/Dec/2024 09:24:34] "GET /sitemap.xml HTTP/1.0" 404 2998
+Not Found: /sitemap.txt
+[28/Dec/2024 09:24:35] "GET /sitemap.txt HTTP/1.0" 404 3002
+Not Found: /sitemap.xml.gz
+[28/Dec/2024 09:24:35] "GET /sitemap.xml.gz HTTP/1.0" 404 3011
+Not Found: /atom.xml
+[28/Dec/2024 09:24:35] "GET /atom.xml HTTP/1.0" 404 2993
+Not Found: /sitemap.txt
+[28/Dec/2024 09:24:38] "GET /sitemap.txt HTTP/1.0" 404 2998
+Not Found: /sitemap.xml.gz
+[28/Dec/2024 09:24:38] "GET /sitemap.xml.gz HTTP/1.0" 404 3007
+Not Found: /atom.xml
+[28/Dec/2024 09:24:39] "GET /atom.xml HTTP/1.0" 404 2989
+Not Found: /sitemaps.xml
+[28/Dec/2024 09:24:39] "GET /sitemaps.xml HTTP/1.0" 404 3005
+Not Found: /sitemap_index.xml
+[28/Dec/2024 09:24:39] "GET /sitemap_index.xml HTTP/1.0" 404 3020
+Not Found: /sitemap.xml
+[28/Dec/2024 09:24:44] "GET /sitemap.xml HTTP/1.0" 404 3002
+[28/Dec/2024 09:48:08] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 09:48:08] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 09:54:58] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 09:54:58] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 10:06:10] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 11:06:58] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 11:06:58] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 11:10:53] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 12:23:30] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:23:45] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:23:58] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:04] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:05] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 12:24:07] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:08] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 12:24:08] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:08] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 12:24:10] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:10] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 12:24:13] "GET /events/ HTTP/1.0" 200 4415
+[28/Dec/2024 12:24:14] "GET / HTTP/1.0" 200 5459
+[28/Dec/2024 12:24:14] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 12:57:20] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 12:57:20] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 13:11:14] "GET /events/calendar-events/?start=2024-12-01T00%3A00%3A00%2B01%3A00&end=2025-01-12T00%3A00%3A00%2B01%3A00 HTTP/1.0" 200 2
+[28/Dec/2024 13:30:19] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 15:26:41] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 15:26:41] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:41] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 15:26:41] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 15:26:41] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:41] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:42] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:43] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:26:44] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 15:42:57] "GET / HTTP/1.1" 302 0
+[28/Dec/2024 15:42:57] "GET /accounts/login/ HTTP/1.1" 200 4372
+[28/Dec/2024 15:55:49] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 15:55:49] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:49] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 15:55:50] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 15:55:50] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:50] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:50] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:50] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:50] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:51] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:52] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:52] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:52] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:52] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 15:55:52] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 16:22:11] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 16:22:11] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 16:22:11] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 16:22:11] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 16:22:11] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 16:43:06] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 16:53:00] "GET / HTTP/1.0" 302 0
+Not Found: /.env
+[28/Dec/2024 16:53:01] "GET /.env HTTP/1.0" 404 2971
+[28/Dec/2024 16:53:01] "POST / HTTP/1.0" 302 0
+[28/Dec/2024 17:19:21] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 17:19:22] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /wp-login.php
+[28/Dec/2024 17:22:07] "GET /wp-login.php HTTP/1.0" 404 3001
+[28/Dec/2024 17:40:38] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 17:40:38] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 17:40:38] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[28/Dec/2024 17:40:40] "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.0" 404 3110
+[28/Dec/2024 17:40:40] "GET / HTTP/1.0" 302 0
+Not Found: /.DS_Store
+[28/Dec/2024 17:40:42] "GET /.DS_Store HTTP/1.0" 404 2986
+Not Found: /.env
+[28/Dec/2024 17:40:42] "GET /.env HTTP/1.0" 404 2971
+Not Found: /.env
+[28/Dec/2024 17:40:44] "POST /.env HTTP/1.0" 404 2972
+Not Found: /.env.save
+[28/Dec/2024 17:40:45] "GET /.env.save HTTP/1.0" 404 2986
+Not Found: /.env.save
+[28/Dec/2024 17:40:49] "POST /.env.save HTTP/1.0" 404 2987
+Not Found: /.env.old
+[28/Dec/2024 17:40:52] "GET /.env.old HTTP/1.0" 404 2983
+Not Found: /.env.old
+[28/Dec/2024 17:40:53] "POST /.env.old HTTP/1.0" 404 2984
+Not Found: /.env.prod
+[28/Dec/2024 17:40:54] "GET /.env.prod HTTP/1.0" 404 2986
+Not Found: /.env.prod
+[28/Dec/2024 17:40:54] "POST /.env.prod HTTP/1.0" 404 2987
+Not Found: /.env.production
+[28/Dec/2024 17:40:57] "GET /.env.production HTTP/1.0" 404 3004
+Not Found: /.env.development 
+[28/Dec/2024 17:41:04] "GET /.env.development%20 HTTP/1.0" 404 3012
+Not Found: /laravel/.env 
+[28/Dec/2024 17:41:09] "GET /laravel/.env%20 HTTP/1.0" 404 3000
+Not Found: /laravel/.env 
+[28/Dec/2024 17:41:10] "POST /laravel/.env%20 HTTP/1.0" 404 3001
+Not Found: /admin-app/.env 
+[28/Dec/2024 17:41:11] "GET /admin-app/.env%20 HTTP/1.0" 404 3006
+Not Found: /admin-app/.env 
+[28/Dec/2024 17:41:12] "POST /admin-app/.env%20 HTTP/1.0" 404 3007
+Not Found: /app/.env 
+[28/Dec/2024 17:41:22] "GET /app/.env%20 HTTP/1.0" 404 2988
+Not Found: /apps/.env 
+[28/Dec/2024 17:41:34] "GET /apps/.env%20 HTTP/1.0" 404 2991
+Not Found: /apps/.env 
+[28/Dec/2024 17:41:39] "POST /apps/.env%20 HTTP/1.0" 404 2992
+Not Found: /cp/.env
+[28/Dec/2024 17:41:39] "GET /cp/.env HTTP/1.0" 404 2980
+Not Found: /cp/.env
+[28/Dec/2024 17:41:49] "POST /cp/.env HTTP/1.0" 404 2981
+Not Found: /private/.env
+[28/Dec/2024 17:41:49] "GET /private/.env HTTP/1.0" 404 2995
+Not Found: /private/.env
+[28/Dec/2024 17:41:51] "POST /private/.env HTTP/1.0" 404 2996
+Not Found: /system/.env
+[28/Dec/2024 17:41:52] "GET /system/.env HTTP/1.0" 404 2992
+Not Found: /system/.env
+[28/Dec/2024 17:41:53] "POST /system/.env HTTP/1.0" 404 2993
+Not Found: /redmine/.env
+[28/Dec/2024 17:41:55] "GET /redmine/.env HTTP/1.0" 404 2995
+Not Found: /redmine/.env
+[28/Dec/2024 17:41:55] "POST /redmine/.env HTTP/1.0" 404 2996
+Not Found: /docker/.env
+[28/Dec/2024 17:41:58] "GET /docker/.env HTTP/1.0" 404 2992
+Not Found: /docker/.env
+[28/Dec/2024 17:41:59] "POST /docker/.env HTTP/1.0" 404 2993
+Not Found: /cms/.env
+[28/Dec/2024 17:42:00] "GET /cms/.env HTTP/1.0" 404 2983
+Not Found: /cms/.env
+[28/Dec/2024 17:42:01] "POST /cms/.env HTTP/1.0" 404 2984
+Not Found: /script/.env
+[28/Dec/2024 17:42:03] "GET /script/.env HTTP/1.0" 404 2992
+Not Found: /script/.env
+[28/Dec/2024 17:42:04] "POST /script/.env HTTP/1.0" 404 2993
+Not Found: /live_env 
+[28/Dec/2024 17:42:05] "GET /live_env%20 HTTP/1.0" 404 2988
+[28/Dec/2024 17:42:06] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 17:42:06] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /live_env 
+[28/Dec/2024 17:42:09] "POST /live_env%20 HTTP/1.0" 404 2989
+Not Found: /application/.env
+[28/Dec/2024 17:42:09] "GET /application/.env HTTP/1.0" 404 3007
+Not Found: /.env.project 
+[28/Dec/2024 17:42:17] "GET /.env.project%20 HTTP/1.0" 404 3000
+Not Found: /.env.project 
+[28/Dec/2024 17:42:17] "POST /.env.project%20 HTTP/1.0" 404 3001
+Not Found: /.env.dist
+[28/Dec/2024 17:42:19] "GET /.env.dist HTTP/1.0" 404 2986
+Not Found: /.env.dist
+[28/Dec/2024 17:42:20] "POST /.env.dist HTTP/1.0" 404 2987
+Not Found: /back/.env
+[28/Dec/2024 17:42:21] "GET /back/.env HTTP/1.0" 404 2986
+Not Found: /back/.env
+[28/Dec/2024 17:42:23] "POST /back/.env HTTP/1.0" 404 2987
+Not Found: /docker/.env
+[28/Dec/2024 17:42:28] "GET /docker/.env HTTP/1.0" 404 2992
+Not Found: /docker/.env
+[28/Dec/2024 17:42:29] "POST /docker/.env HTTP/1.0" 404 2993
+Not Found: /fedex/.env
+[28/Dec/2024 17:42:31] "GET /fedex/.env HTTP/1.0" 404 2989
+Not Found: /fedex/.env
+[28/Dec/2024 17:42:33] "POST /fedex/.env HTTP/1.0" 404 2990
+Not Found: /__tests__/test-become/.env
+[28/Dec/2024 17:42:33] "GET /__tests__/test-become/.env HTTP/1.0" 404 3037
+Not Found: /__tests__/test-become/.env
+[28/Dec/2024 17:42:35] "POST /__tests__/test-become/.env HTTP/1.0" 404 3038
+Not Found: /local/.env
+[28/Dec/2024 17:42:35] "GET /local/.env HTTP/1.0" 404 2989
+Not Found: /local/.env
+[28/Dec/2024 17:42:35] "POST /local/.env HTTP/1.0" 404 2990
+Not Found: /rest/.env
+[28/Dec/2024 17:42:37] "GET /rest/.env HTTP/1.0" 404 2986
+Not Found: /rest/.env
+[28/Dec/2024 17:42:39] "POST /rest/.env HTTP/1.0" 404 2987
+Not Found: /shared/.env 
+[28/Dec/2024 17:42:41] "GET /shared/.env%20 HTTP/1.0" 404 2997
+Not Found: /shared/.env 
+[28/Dec/2024 17:42:43] "POST /shared/.env%20 HTTP/1.0" 404 2998
+Not Found: /sources/.env
+[28/Dec/2024 17:42:43] "GET /sources/.env HTTP/1.0" 404 2995
+Not Found: /sources/.env
+[28/Dec/2024 17:42:44] "POST /sources/.env HTTP/1.0" 404 2996
+Not Found: /enviroments/.env
+[28/Dec/2024 17:42:52] "GET /enviroments/.env HTTP/1.0" 404 3007
+Not Found: /enviroments/.env
+[28/Dec/2024 17:42:54] "POST /enviroments/.env HTTP/1.0" 404 3008
+Not Found: /debug/default/view
+[28/Dec/2024 17:43:10] "GET /debug/default/view?panel=config/frontend_dev.php HTTP/1.0" 404 3043
+Not Found: /debug/default/view.html
+[28/Dec/2024 17:43:15] "GET /debug/default/view.html HTTP/1.0" 404 3028
+Not Found: /debug/default/view
+[28/Dec/2024 17:43:17] "GET /debug/default/view HTTP/1.0" 404 3013
+Not Found: /frontend/web/debug/default/view
+[28/Dec/2024 17:43:19] "GET /frontend/web/debug/default/view HTTP/1.0" 404 3052
+Not Found: /web/debug/default/view
+[28/Dec/2024 17:43:20] "GET /web/debug/default/view HTTP/1.0" 404 3025
+Not Found: /sapi/debug/default/view
+[28/Dec/2024 17:43:22] "GET /sapi/debug/default/view HTTP/1.0" 404 3028
+Not Found: /config.json
+[28/Dec/2024 17:43:25] "GET /config.json HTTP/1.0" 404 2992
+Not Found: /AwsConfig.json
+[28/Dec/2024 17:43:26] "GET /AwsConfig.json HTTP/1.0" 404 3001
+Not Found: /awsconfig.json
+[28/Dec/2024 17:43:30] "GET /awsconfig.json HTTP/1.0" 404 3001
+Not Found: /aws.json
+[28/Dec/2024 17:43:31] "GET /aws.json HTTP/1.0" 404 2983
+Not Found: /conf.json
+[28/Dec/2024 17:43:34] "GET /conf.json HTTP/1.0" 404 2986
+Not Found: /.json
+[28/Dec/2024 17:43:46] "GET /.json HTTP/1.0" 404 2974
+Not Found: /smtp.json
+[28/Dec/2024 17:43:50] "GET /smtp.json HTTP/1.0" 404 2986
+Not Found: /db.json
+[28/Dec/2024 17:43:51] "GET /db.json HTTP/1.0" 404 2980
+Not Found: /sendgrid.json
+[28/Dec/2024 17:43:51] "GET /sendgrid.json HTTP/1.0" 404 2998
+Not Found: /_wpeprivate/config.json
+[28/Dec/2024 17:43:58] "GET /_wpeprivate/config.json HTTP/1.0" 404 3028
+Not Found: /deployment-config.json
+[28/Dec/2024 17:43:59] "GET /deployment-config.json HTTP/1.0" 404 3025
+Not Found: /sftp-config.json
+[28/Dec/2024 17:44:01] "GET /sftp-config.json HTTP/1.0" 404 3007
+Not Found: /db/robomongo.json
+[28/Dec/2024 17:44:03] "GET /db/robomongo.json HTTP/1.0" 404 3010
+Not Found: /robomongo.json
+[28/Dec/2024 17:44:05] "GET /robomongo.json HTTP/1.0" 404 3001
+Not Found: /client_secrets.json
+[28/Dec/2024 17:44:06] "GET /client_secrets.json HTTP/1.0" 404 3016
+Not Found: /user-config.json
+[28/Dec/2024 17:44:07] "GET /user-config.json HTTP/1.0" 404 3007
+Not Found: /ssh-config.json
+[28/Dec/2024 17:44:11] "GET /ssh-config.json HTTP/1.0" 404 3004
+Not Found: /database-config.json
+[28/Dec/2024 17:44:11] "GET /database-config.json HTTP/1.0" 404 3019
+Not Found: /config/default.json
+[28/Dec/2024 17:44:15] "GET /config/default.json HTTP/1.0" 404 3016
+Not Found: /config/config.json
+[28/Dec/2024 17:44:18] "GET /config/config.json HTTP/1.0" 404 3013
+Not Found: /credentials/config.json
+[28/Dec/2024 17:44:20] "GET /credentials/config.json HTTP/1.0" 404 3028
+[28/Dec/2024 17:44:21] "GET / HTTP/1.0" 302 0
+Not Found: /app_dev.php/_profiler/open
+[28/Dec/2024 17:44:27] "GET /app_dev.php/_profiler/open?file=app/config/parameters.yml HTTP/1.0" 404 3068
+Not Found: /_profiler/open
+[28/Dec/2024 17:44:30] "GET /_profiler/open?file=app/config/parameters.yml HTTP/1.0" 404 3032
+Not Found: /app/config/parameters.yml
+[28/Dec/2024 17:44:32] "GET /app/config/parameters.yml HTTP/1.0" 404 3034
+Not Found: /config/parameters.yml
+[28/Dec/2024 17:44:35] "GET /config/parameters.yml HTTP/1.0" 404 3022
+Not Found: /parameters.yml
+[28/Dec/2024 17:44:37] "GET /parameters.yml HTTP/1.0" 404 3001
+Not Found: /_profiler/phpinfo
+[28/Dec/2024 17:44:39] "GET /_profiler/phpinfo HTTP/1.0" 404 3010
+Not Found: /app_dev.php/_profiler/phpinfo
+[28/Dec/2024 17:44:41] "GET /app_dev.php/_profiler/phpinfo HTTP/1.0" 404 3046
+Not Found: /phpinfo.php
+[28/Dec/2024 17:44:42] "GET /phpinfo.php HTTP/1.0" 404 2992
+Not Found: /info.php
+[28/Dec/2024 17:44:42] "GET /info.php HTTP/1.0" 404 2983
+Not Found: /owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
+[28/Dec/2024 17:44:42] "GET /owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php HTTP/1.0" 404 3187
+[28/Dec/2024 17:44:44] "GET /?phpinfo=1 HTTP/1.0" 302 0
+Not Found: /tool/view/phpinfo.view.php
+[28/Dec/2024 17:44:46] "GET /tool/view/phpinfo.view.php HTTP/1.0" 404 3037
+Not Found: /phpinfo
+[28/Dec/2024 17:44:46] "GET /phpinfo HTTP/1.0" 404 2980
+Not Found: /symfony/public/_profiler/phpinfo
+[28/Dec/2024 17:44:48] "GET /symfony/public/_profiler/phpinfo HTTP/1.0" 404 3055
+[28/Dec/2024 17:44:55] "GET /?phpinfo=-1 HTTP/1.0" 302 0
+Not Found: /__info.php
+[28/Dec/2024 17:44:57] "GET /__info.php HTTP/1.0" 404 2989
+Not Found: /_info-backoffice.php
+[28/Dec/2024 17:44:59] "GET /_info-backoffice.php HTTP/1.0" 404 3019
+Not Found: /_info.php
+[28/Dec/2024 17:45:02] "GET /_info.php HTTP/1.0" 404 2986
+Not Found: /_poopinfo.php
+[28/Dec/2024 17:45:14] "GET /_poopinfo.php HTTP/1.0" 404 2998
+Not Found: /.__info.php
+[28/Dec/2024 17:45:15] "GET /.__info.php HTTP/1.0" 404 2992
+Not Found: /.info.php
+[28/Dec/2024 17:45:18] "GET /.info.php HTTP/1.0" 404 2986
+Not Found: /0.0_phpinfo.php
+[28/Dec/2024 17:45:21] "GET /0.0_phpinfo.php HTTP/1.0" 404 3004
+Not Found: /00_server_info.php
+[28/Dec/2024 17:45:27] "GET /00_server_info.php HTTP/1.0" 404 3013
+Not Found: /02-info.php
+[28/Dec/2024 17:45:30] "GET /02-info.php HTTP/1.0" 404 2992
+Not Found: /1_1_PhpInfo.php
+[28/Dec/2024 17:45:31] "GET /1_1_PhpInfo.php HTTP/1.0" 404 3004
+Not Found: /5info.php
+[28/Dec/2024 17:45:34] "GET /5info.php HTTP/1.0" 404 2986
+Not Found: /api/index.php/v1/config/application
+[28/Dec/2024 17:45:41] "GET /api/index.php/v1/config/application?public=true HTTP/1.0" 404 3076
+[28/Dec/2024 18:06:47] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 19:18:17] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 19:54:49] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 19:54:49] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 19:55:27] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 19:55:28] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 20:47:59] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 20:47:59] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:47:59] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 20:47:59] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 20:47:59] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:47:59] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:00] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:01] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 20:48:02] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 21:15:00] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 21:15:01] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:01] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 21:15:01] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 21:15:01] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:01] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:01] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:02] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:03] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:15:04] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 21:48:37] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 21:48:37] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:37] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 21:48:38] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 21:48:38] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:38] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:38] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:38] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:38] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:39] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:40] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:40] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:40] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:40] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:48:40] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 21:49:32] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 21:49:32] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:32] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 21:49:33] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 21:49:33] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:33] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:33] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:33] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:33] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:34] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:34] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:34] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:34] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:34] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 21:49:35] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 21:50:15] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 22:23:33] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 22:23:33] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:33] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 22:23:33] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 22:23:34] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:34] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:35] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:36] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:36] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:23:36] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 22:25:09] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 22:25:09] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:10] "GET /wp-includes/wlwmanifest.xml HTTP/1.0" 404 3046
+Not Found: /xmlrpc.php
+[28/Dec/2024 22:25:10] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+[28/Dec/2024 22:25:10] "GET / HTTP/1.0" 302 0
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:10] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:10] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:10] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /website/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:10] "GET /website/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3070
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /news/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /news/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:11] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:12] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:12] "GET /wp2/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /site/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:12] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:12] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[28/Dec/2024 22:25:12] "GET /sito/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+[28/Dec/2024 22:26:23] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 22:26:24] "GET /accounts/login/ HTTP/1.0" 200 4372
+[28/Dec/2024 22:30:59] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 22:31:00] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /robots.txt
+[28/Dec/2024 22:42:47] "GET /robots.txt HTTP/1.0" 404 2995
+[28/Dec/2024 22:49:16] "GET / HTTP/1.0" 302 0
+[28/Dec/2024 23:26:30] "GET / HTTP/1.0" 302 0
+Not Found: /robots.txt
+[29/Dec/2024 01:26:57] "GET /robots.txt HTTP/1.0" 404 2995
+[29/Dec/2024 01:27:07] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 01:27:07] "GET /accounts/login/ HTTP/1.0" 200 4372
+[29/Dec/2024 01:36:40] "GET / HTTP/1.1" 302 0
+[29/Dec/2024 01:36:40] "GET /accounts/login/ HTTP/1.1" 200 4372
+Not Found: /robots.txt
+[29/Dec/2024 01:54:41] "GET /robots.txt HTTP/1.0" 404 2999
+[29/Dec/2024 01:54:43] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 01:54:44] "GET /accounts/login/ HTTP/1.0" 200 4372
+[29/Dec/2024 01:54:45] "GET /events/ HTTP/1.0" 302 0
+[29/Dec/2024 01:54:46] "GET /client/customer-list/ HTTP/1.0" 302 0
+[29/Dec/2024 01:54:47] "GET /menu/dishes/ HTTP/1.0" 302 0
+[29/Dec/2024 01:54:48] "GET /menu/menus/ HTTP/1.0" 302 0
+[29/Dec/2024 01:54:49] "GET /employees/ HTTP/1.0" 302 0
+[29/Dec/2024 01:54:50] "GET /materials/ HTTP/1.0" 302 0
+[29/Dec/2024 01:55:53] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 01:55:54] "GET /accounts/login/ HTTP/1.0" 200 4372
+[29/Dec/2024 02:25:09] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 02:25:12] "GET /accounts/login/ HTTP/1.0" 200 4372
+[29/Dec/2024 03:21:23] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 04:51:10] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 05:50:36] "GET / HTTP/1.0" 302 0
+Not Found: /wp-includes/ID3/license.txt
+[29/Dec/2024 05:50:37] "GET /wp-includes/ID3/license.txt HTTP/1.0" 404 3046
+Not Found: /feed/
+[29/Dec/2024 05:50:37] "GET /feed/ HTTP/1.0" 404 2980
+Not Found: /xmlrpc.php
+[29/Dec/2024 05:50:37] "GET /xmlrpc.php?rsd HTTP/1.0" 404 2999
+Not Found: /blog/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:37] "GET /blog/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /web/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:37] "GET /web/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:38] "GET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3076
+Not Found: /wp/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:38] "GET /wp/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3055
+Not Found: /2020/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:38] "GET /2020/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2019/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:38] "GET /2019/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /2021/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:39] "GET /2021/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /shop/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:39] "GET /shop/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:39] "GET /wp1/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+Not Found: /test/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:39] "GET /test/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /site/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:40] "GET /site/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3061
+Not Found: /cms/wp-includes/wlwmanifest.xml
+[29/Dec/2024 05:50:40] "GET /cms/wp-includes/wlwmanifest.xml HTTP/1.0" 404 3058
+[29/Dec/2024 06:19:46] "GET / HTTP/1.0" 302 0
+Not Found: /cgi-bin/luci/;stok=/locale
+[29/Dec/2024 07:10:36] "GET /cgi-bin/luci/;stok=/locale HTTP/1.0" 404 3041
+[29/Dec/2024 07:49:27] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 07:49:27] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /robots.txt
+[29/Dec/2024 10:54:44] "GET /robots.txt HTTP/1.0" 404 2995
+[29/Dec/2024 10:55:40] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 11:14:25] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00g\x00¨Àp2\x17ðJe\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[29/Dec/2024 11:14:25] "   TZ          0I    g ¨Àp2ðJe                                                 " 400 -
+[29/Dec/2024 11:14:30] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00g\x00¨Àp2\x17ðJe\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[29/Dec/2024 11:14:30] "   TZ          0I    g ¨Àp2ðJe                                                 " 400 -
+[29/Dec/2024 11:14:35] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00g\x00¨Àp2\x17ðJe\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[29/Dec/2024 11:14:35] "   TZ          0I    g ¨Àp2ðJe                                                 " 400 -
+[29/Dec/2024 11:14:40] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00g\x00¨Àp2\x17ðJe\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[29/Dec/2024 11:14:40] "   TZ          0I    g ¨Àp2ðJe                                                 " 400 -
+[29/Dec/2024 12:34:34] "GET / HTTP/1.1" 302 0
+[29/Dec/2024 12:34:34] "GET /accounts/login/ HTTP/1.1" 200 4372
+[29/Dec/2024 12:34:34] "GET /static/images/favicon.ico HTTP/1.1" 200 15406
+[29/Dec/2024 12:46:39] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 12:46:40] "GET /accounts/login/ HTTP/1.0" 200 4372
+Not Found: /th1s_1s_a_4o4.html
+[29/Dec/2024 12:46:41] "GET /th1s_1s_a_4o4.html HTTP/1.0" 404 3023
+[29/Dec/2024 12:46:42] "GET /employees/ HTTP/1.0" 302 0
+[29/Dec/2024 12:46:42] "GET /menu/dishes/ HTTP/1.0" 302 0
+[29/Dec/2024 12:46:42] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 12:46:43] "GET /events/ HTTP/1.0" 302 0
+[29/Dec/2024 12:46:43] "GET /client/customer-list/ HTTP/1.0" 302 0
+[29/Dec/2024 12:46:43] "GET /menu/menus/ HTTP/1.0" 302 0
+[29/Dec/2024 12:46:43] "GET /materials/ HTTP/1.0" 302 0
+[29/Dec/2024 13:00:40] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 13:28:50] "GET / HTTP/1.0" 302 0
+[29/Dec/2024 13:28:50] "GET /accounts/login/ HTTP/1.0" 200 4372
