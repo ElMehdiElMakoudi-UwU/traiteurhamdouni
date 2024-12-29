@@ -17,13 +17,17 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">Revenue</h5>
-                    <p class="card-text">250,000.00 MAD</p>
+                    <p class="card-text">{{ total_revenue|floatformat:2 }} MAD</p>
                 </div>
             </div>
             <div class="card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title">Depenses</h5>
-                    <p class="card-text">175,000.00 MAD</p>
+                    <h5 class="card-title">Next Event</h5>
+                    {% if next_event %}
+                        <p class="card-text">{{ next_event.name }} (in {{ days_until_next_event }} day{% if days_until_next_event > 1 %}s{% endif %})</p>
+                    {% else %}
+                        <p class="card-text">No upcoming events.</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="card mb-3">
