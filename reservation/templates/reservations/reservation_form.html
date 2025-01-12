@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Reservation Form{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ form.instance.pk|yesno:"Edit Reservation,Add New Reservation" }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_name" class="form-label">Client Name</label>
+            {{ form.name }}
+        </div>
+        <div class="mb-3">
+            <label for="id_date" class="form-label">Date</label>
+            {{ form.date }}
+        </div>
+        <div class="form-check mb-3">
+            {{ form.decorations_required }} <label for="id_decorations_required" class="form-check-label">Decorations Required</label>
+        </div>
+        <div class="form-check mb-3">
+            {{ form.traiteur_required }} <label for="id_traiteur_required" class="form-check-label">Traiteur Required</label>
+        </div>
+        <div class="mb-3">
+            <label for="id_traiteur_name" class="form-label">Traiteur Name</label>
+            {{ form.traiteur_name }}
+        </div>
+        <div class="mb-3">
+            <label for="id_total_amount" class="form-label">Total Amount</label>
+            {{ form.total_amount }}
+        </div>
+        <div class="mb-3">
+            <label for="id_advance_amount" class="form-label">Advance Amount</label>
+            {{ form.advance_amount }}
+        </div>
+        <div class="mb-3">
+            <label for="id_notes" class="form-label">Notes</label>
+            {{ form.notes }}
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{% url 'reservations:reservation_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

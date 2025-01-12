@@ -5,13 +5,19 @@
 {% block content %}
 <div class="container mt-4">
     <div class="row">
-        <!-- Calendar Section -->
-        <div class="col-md-8">
-            <h3 class="mb-4">Calendrier</h3>
-            <div id="calendar"></div>
+        <!-- Calendars Section -->
+        <div class="col-md-6">
+            <h3 class="mb-4">Calendrier des Événements</h3>
+            <div id="event-calendar-container"></div>
         </div>
+        <div class="col-md-6">
+            <h3 class="mb-4">Calendrier de Palais Hamdouni</h3>
+            <div id="reservation-calendar-container"></div>
+        </div>
+    </div>
 
-        <!-- KPI Section -->
+    <!-- KPI Section -->
+    <div class="row mt-4">
         <div class="col-md-4">
             <h3 class="mb-4">KPIs</h3>
             <div class="card mb-3">
@@ -43,21 +49,33 @@
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var calendarEl = document.getElementById('calendar');
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+        // Initialize Event Calendar
+        var eventCalendarEl = document.getElementById('event-calendar-container');
+        var eventCalendar = new FullCalendar.Calendar(eventCalendarEl, {
             initialView: 'dayGridMonth',
-            events: '/events/calendar-events/',  // URL to fetch events
+            events: '/events/calendar-events/', // URL to fetch events
             eventClick: function (info) {
                 info.jsEvent.preventDefault(); // Prevent the default navigation
-
                 if (info.event.url) {
                     window.location.href = info.event.url; // Redirect to the event detail page
                 }
             }
         });
+        eventCalendar.render();
 
-        calendar.render();
+        // Initialize Reservation Calendar
+        var reservationCalendarEl = document.getElementById('reservation-calendar-container');
+        var reservationCalendar = new FullCalendar.Calendar(reservationCalendarEl, {
+            initialView: 'dayGridMonth',
+            events: '/reservations/calendar-events/', // URL to fetch reservations
+            eventClick: function (info) {
+                info.jsEvent.preventDefault(); // Prevent the default navigation
+                if (info.event.url) {
+                    window.location.href = info.event.url; // Redirect to the reservation detail page
+                }
+            }
+        });
+        reservationCalendar.render();
     });
 </script>
 
