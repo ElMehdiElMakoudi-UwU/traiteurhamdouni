@@ -1,6 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CustomerForm
 from .models import Customer
+from django.shortcuts import render
+from .models import Customer
+from django.db.models import Q
+from django.shortcuts import render, get_object_or_404
+from .models import Customer
+from datetime import datetime
+from django.shortcuts import render
+from events.models import Event
+from django.db.models import Sum
 
 # Add Customer View (already implemented)
 def add_customer(request):
@@ -14,10 +23,6 @@ def add_customer(request):
     return render(request, 'client/add_customer.html', {'form': form})
 
 # List Customers View (already implemented)
-from django.shortcuts import render
-from .models import Customer
-from django.db.models import Q
-
 def customer_list(request):
     search_query = request.GET.get('q', '')  # Get the search query from the URL parameters
     sort_by = request.GET.get('sort_by', 'full_name')  # Default sort by 'full_name'
@@ -60,9 +65,6 @@ def delete_customer(request, pk):
         return redirect('customer_list')
     return render(request, 'client/delete_customer.html', {'customer': customer})
 
-from django.shortcuts import render, get_object_or_404
-from .models import Customer
-
 def customer_detail(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     # Add logs or related data here if needed, for now, just the customer details
@@ -76,43 +78,55 @@ def customer_detail(request, pk):
         'activity_logs': activity_logs,
     })
 
-
-from datetime import datetime
-from django.shortcuts import render
+from datetime import datetime, timedelta
+from django.db.models import Sum, F
 from events.models import Event
-from django.db.models import Sum
+from reservation.models import Reservation
 
 def home(request):
-
     now = datetime.now()
+    today = now.date()
 
-    # Calculate total revenue for completed events
+    # Calculate total revenue for all events in the current month
     total_revenue = (
         Event.objects.filter(date__year=now.year, date__month=now.month)
         .aggregate(total_revenue=Sum('event_cost'))['total_revenue']
     ) or 0
 
-    # Get the current month and year
-    current_month = datetime.now().month
-    current_year = datetime.now().year
-
-    # Query events for the current month
-    monthly_events_count = Event.objects.filter(date__year=current_year, date__month=current_month).count()
+    # Get the count of events in the current month
+    monthly_events_count = Event.objects.filter(date__year=now.year, date__month=now.month).count()
 
     # Find the next upcoming event
-    today = datetime.now().date()
-    next_event = (
-        Event.objects.filter(date__gte=today).order_by('date').first()
-    )
+    next_event = Event.objects.filter(date__gte=today).order_by('date').first()
+    days_until_next_event = (next_event.date - today).days if next_event else None
 
-    if next_event:
-        days_until_next_event = (next_event.date - today).days
-    else:
-        days_until_next_event = None
+    # Calculate the count of reservations in the current month
+    monthly_reservations_count = Reservation.objects.filter(date__year=now.year, date__month=now.month).count()
+
+    # Find the next upcoming reservation
+    next_reservation = Reservation.objects.filter(date__gte=today).order_by('date').first()
+    days_until_next_reservation = (next_reservation.date - today).days if next_reservation else None
+
+    # Calculate average revenue per event
+    average_revenue_per_event = total_revenue / monthly_events_count if monthly_events_count > 0 else 0
+
+    # Calculate percentage of booked days (events + reservations)
+    start_of_month = today.replace(day=1)
+    end_of_month = (start_of_month + timedelta(days=32)).replace(day=1) - timedelta(days=1)
+    booked_days_count = (
+        Event.objects.filter(date__month=now.month).values('date').distinct().count() +
+        Reservation.objects.filter(date__month=now.month).values('date').distinct().count()
+    )
+    percentage_booked_days = (booked_days_count / end_of_month.day) * 100
 
     return render(request, 'home.html', {
         'total_revenue': total_revenue,
         'monthly_events_count': monthly_events_count,
         'next_event': next_event,
         'days_until_next_event': days_until_next_event,
+        'monthly_reservations_count': monthly_reservations_count,
+        'next_reservation': next_reservation,
+        'days_until_next_reservation': days_until_next_reservation,
+        'average_revenue_per_event': average_revenue_per_event,
+        'percentage_booked_days': percentage_booked_days,
     })
