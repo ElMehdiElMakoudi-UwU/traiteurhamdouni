@@ -41,3 +41,17 @@ def reservation_calendar_events(request):
         for reservation in reservations
     ]
     return JsonResponse(events, safe=False)
+
+from django.shortcuts import get_object_or_404, redirect
+from django.contrib import messages
+from .models import Reservation
+
+def delete_reservation(request, reservation_id):
+    if request.method == 'POST':
+        reservation = get_object_or_404(Reservation, id=reservation_id)
+        reservation.delete()
+        messages.success(request, "Reservation deleted successfully!")
+        return redirect('reservations:reservation_list')
+    else:
+        messages.error(request, "Invalid request method.")
+        return redirect('reservations:reservation_list')

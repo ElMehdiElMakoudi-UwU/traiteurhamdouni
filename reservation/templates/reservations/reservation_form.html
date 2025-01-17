@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% block title %}Reservation Form{% endblock %}
+{% block title %}Formulaire de Réservation{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
-    <h2>{{ form.instance.pk|yesno:"Edit Reservation,Add New Reservation" }}</h2>
+    <h2>{{ form.instance.pk|yesno:"Modifier la Réservation,Ajouter une Nouvelle Réservation" }}</h2>
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="id_name" class="form-label">Client Name</label>
+            <label for="id_name" class="form-label">Nom du Client</label>
             {{ form.name }}
         </div>
         <div class="mb-3">
@@ -16,29 +16,29 @@
             {{ form.date }}
         </div>
         <div class="form-check mb-3">
-            {{ form.decorations_required }} <label for="id_decorations_required" class="form-check-label">Decorations Required</label>
+            {{ form.decorations_required }} <label for="id_decorations_required" class="form-check-label">Décorations Requises</label>
         </div>
         <div class="form-check mb-3">
-            {{ form.traiteur_required }} <label for="id_traiteur_required" class="form-check-label">Traiteur Required</label>
+            {{ form.traiteur_required }} <label for="id_traiteur_required" class="form-check-label">Traiteur Requis</label>
         </div>
         <div class="mb-3">
-            <label for="id_traiteur_name" class="form-label">Traiteur Name</label>
+            <label for="id_traiteur_name" class="form-label">Nom du Traiteur</label>
             {{ form.traiteur_name }}
         </div>
         <div class="mb-3">
-            <label for="id_total_amount" class="form-label">Total Amount</label>
+            <label for="id_total_amount" class="form-label">Montant Total</label>
             {{ form.total_amount }}
         </div>
         <div class="mb-3">
-            <label for="id_advance_amount" class="form-label">Advance Amount</label>
+            <label for="id_advance_amount" class="form-label">Montant de l'Avance</label>
             {{ form.advance_amount }}
         </div>
         <div class="mb-3">
-            <label for="id_notes" class="form-label">Notes</label>
+            <label for="id_notes" class="form-label">Remarques</label>
             {{ form.notes }}
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
-        <a href="{% url 'reservations:reservation_list' %}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{% url 'reservations:reservation_list' %}" class="btn btn-secondary">Annuler</a>
     </form>
 </div>
 {% endblock %}
