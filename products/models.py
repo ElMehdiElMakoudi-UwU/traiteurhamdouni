@@ -3,10 +3,10 @@ from events.models import Event  # Assuming events app already exists
 
 class Product(models.Model):
     PRODUCT_TYPES = [
-        ('sweet', 'Sweets'),
-        ('salted', 'Salted'),
-        ('cake', 'Cakes'),
-        ('soire', 'Soirée Items'),
+        ('sweet', 'Sucres'),
+        ('salted', 'Sales'),
+        ('cake', 'Tartes'),
+        ('soire', 'Petit Soiree'),
     ]
 
     name = models.CharField(max_length=255, verbose_name="Product Name")
