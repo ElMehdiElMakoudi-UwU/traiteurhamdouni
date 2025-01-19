@@ -34,7 +34,7 @@
                     <a href="{% url 'events:event_detail' event.id %}" class="btn btn-info btn-sm">Details</a>
                     <a href="{% url 'events:edit_event' event.id %}" class="btn btn-warning btn-sm">Modifier</a>
                     <a href="{% url 'events:delete_event' event.id %}" class="btn btn-danger btn-sm">Supprimer</a>
-                    <a href="{% url 'assignments:assign_employee' %}?event_id={{ event.id }}" class="btn btn-primary btn-sm">Assigner staff</a>
+                    <!-- <a href="{% url 'assignments:assign_employee' %}?event_id={{ event.id }}" class="btn btn-primary btn-sm">Assigner staff</a> -->
                 </td>
             </tr>
             {% empty %}

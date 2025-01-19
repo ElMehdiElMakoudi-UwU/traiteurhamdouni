@@ -44,14 +44,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/client/customer-list/">Clients</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-                            <li><a class="dropdown-item" href="{% url 'menu:dish_list' %}">Plats</a></li>
-                            <li><a class="dropdown-item" href="/menu/menus/">Menus</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'menu:dish_list' %}">Plats</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/employees/">Employes</a>
@@ -60,21 +54,19 @@
                         <a class="nav-link" href="/materials/">Materiel</a>
                     </li>
                     <li class="nav-item">
-                        <!-- Add the new Products button -->
                         <a class="nav-link" href="{% url 'products:product_list' %}">Produits Royal</a>
                     </li>
                     <li class="nav-item">
-                        <!-- Add the new Products button -->
                         <a class="nav-link" href="{% url 'reservations:reservation_list' %}">Palais Hamdouni</a>
                     </li>
                     <!-- Authentication Links -->
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                            <a class="nav-link" href="{% url 'logout' %}">Se deconnecter</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Login</a>
+                            <a class="nav-link" href="{% url 'login' %}">Se connecter</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -83,11 +75,11 @@
     </nav>
     
     <!-- Hero Section -->
-    <header class="bg-dark text-white text-center py-5">
+    <!-- <header class="bg-dark text-white text-center py-5">
         <div class="container">
             <h1>Bienvenue a Traiteur Hamdouni</h1>
         </div>
-    </header>
+    </header> -->
 
     <!-- Main Content -->
     <div class="container mt-4">
