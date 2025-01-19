@@ -68,11 +68,6 @@ from products.models import Product
 from materials.models import Material
 from assignments.models import EmployeeAssignment, EventMaterialAllocation
 from .forms import EventForm
-
-def event_list(request):
-    events = Event.objects.all()
-    return render(request, 'events/event_list.html', {'events': events})
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Event
@@ -83,6 +78,23 @@ from materials.models import Material
 from assignments.models import EmployeeAssignment, EventMaterialAllocation
 from employees.models import Employee
 from django.db.models import Q
+
+from django.shortcuts import render
+from .models import Event
+
+def event_list(request):
+    # Get the sort parameter from the request
+    sort_by = request.GET.get('sort_by', 'date')  # Default sorting by date
+    sort_order = request.GET.get('order', 'asc')  # Default order is ascending
+
+    # Add a '-' prefix for descending order
+    if sort_order == 'desc':
+        sort_by = f'-{sort_by}'
+
+    # Fetch and sort events
+    events = Event.objects.all().order_by(sort_by)
+
+    return render(request, 'events/event_list.html', {'events': events, 'sort_by': sort_by, 'sort_order': sort_order})
 
 def add_event(request):
     if request.method == 'POST':

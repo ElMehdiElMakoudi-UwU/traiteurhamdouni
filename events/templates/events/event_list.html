@@ -5,18 +5,60 @@
 {% block content %}
 <div class="container mt-3">
     <h2 class="mb-4">Liste des evenements</h2>
-    <a href="{% url 'events:add_event' %}" class="btn btn-primary mt-3">Ajouter evenement</a>   
+    <a href="{% url 'events:add_event' %}" class="btn btn-primary mt-3">Ajouter evenement</a>
 
     <table class="table table-striped mt-2">
         <thead class="table-dark">
             <tr>
                 <th>#</th>
-                <th>Evenement</th>
-                <th>Date</th>
-                <th>Heure de debut</th>
-                <th>Heure de fin</th>
-                <th>Type d'evenement</th>
-                <th>Client</th>
+                <th>
+                    <a href="?sort_by=name&order={% if sort_by == 'name' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Evenement
+                        {% if sort_by == 'name' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="?sort_by=date&order={% if sort_by == 'date' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Date
+                        {% if sort_by == 'date' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="?sort_by=start_time&order={% if sort_by == 'start_time' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Heure de debut
+                        {% if sort_by == 'start_time' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="?sort_by=end_time&order={% if sort_by == 'end_time' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Heure de fin
+                        {% if sort_by == 'end_time' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="?sort_by=event_type&order={% if sort_by == 'event_type' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Type d'evenement
+                        {% if sort_by == 'event_type' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
+                <th>
+                    <a href="?sort_by=client&order={% if sort_by == 'client' and sort_order == 'asc' %}desc{% else %}asc{% endif %}" class="text-light">
+                        Client
+                        {% if sort_by == 'client' %}
+                            <span>{% if sort_order == 'asc' %}▲{% else %}▼{% endif %}</span>
+                        {% endif %}
+                    </a>
+                </th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,15 +68,14 @@
                 <td>{{ forloop.counter }}</td>
                 <td>{{ event.name }}</td>
                 <td>{{ event.date|date:"M d, Y" }}</td>
-                <td>{{ event.start_time|time:"g:i a" }}</td>
-                <td>{{ event.end_time|time:"g:i a" }}</td>
+                <td>{{ event.start_time|time:"H:i" }}</td>
+                <td>{{ event.end_time|time:"H:i" }}</td>
                 <td>{{ event.event_type }}</td>
                 <td>{{ event.client }}</td>
                 <td>
                     <a href="{% url 'events:event_detail' event.id %}" class="btn btn-info btn-sm">Details</a>
                     <a href="{% url 'events:edit_event' event.id %}" class="btn btn-warning btn-sm">Modifier</a>
                     <a href="{% url 'events:delete_event' event.id %}" class="btn btn-danger btn-sm">Supprimer</a>
-                    <!-- <a href="{% url 'assignments:assign_employee' %}?event_id={{ event.id }}" class="btn btn-primary btn-sm">Assigner staff</a> -->
                 </td>
             </tr>
             {% empty %}
