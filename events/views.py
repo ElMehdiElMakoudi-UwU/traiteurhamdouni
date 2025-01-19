@@ -4,64 +4,85 @@ from django.http import JsonResponse, HttpResponse
 from django.template.loader import get_template, render_to_string
 from xhtml2pdf import pisa
 from datetime import datetime
-
 from .forms import EventForm
 from .models import Event
 from assignments.models import EmployeeAssignment, EventMaterialAllocation
-
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import EventForm
-
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import EventForm
-
 from django.db.models import F
 from menu.models import Dish
-
 from menu.models import Dish
-
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import EventForm
 from menu.models import Dish  # Import Dish model
-
-
-# Event List
-def event_list(request):
-    events = Event.objects.all()
-    return render(request, 'events/event_list.html', {'events': events})
-
-
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from .forms import EventForm
 from .models import Event, Dish
 from products.models import Product
 from products.models import EventProduct
-
-
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Event, EventProduct
 from .forms import EventForm
 from menu.models import Dish
 from products.models import Product
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Event, EventProduct
 from .forms import EventForm
 from menu.models import Dish
 from products.models import Product
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from .models import Event, EventProduct
 from .forms import EventForm
 from menu.models import Dish
 from products.models import Product
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from django.http import JsonResponse
+from django.db.models import Q
+from .models import Event, Dish, EventProduct
+from .forms import EventForm
+from products.models import Product
+from materials.models import Material
+from employees.models import Employee
+from assignments.models import EmployeeAssignment, EventMaterialAllocation  # Correct import
+from assignments.models import EmployeeAssignment
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from .forms import EventForm
+from menu.models import Dish
+from products.models import Product, EventProduct
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
+from .models import Event, EventProduct
+from menu.models import Dish
+from products.models import Product
+from materials.models import Material
+from assignments.models import EmployeeAssignment, EventMaterialAllocation
+from .forms import EventForm
+
+def event_list(request):
+    events = Event.objects.all()
+    return render(request, 'events/event_list.html', {'events': events})
+
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from .models import Event
+from .forms import EventForm
+from menu.models import Dish
+from products.models import Product
+from materials.models import Material
+from assignments.models import EmployeeAssignment, EventMaterialAllocation
+from employees.models import Employee
+from django.db.models import Q
 
 def add_event(request):
     if request.method == 'POST':
@@ -82,8 +103,30 @@ def add_event(request):
             selected_products = Product.objects.filter(id__in=selected_products_ids)
             EventProduct.objects.filter(event=event).delete()  # Clear existing products for this event
             for product in selected_products:
-                product_quantity = event.number_of_tables * 10  # Calculate quantity
+                product_quantity = event.number_of_tables * 10  # Example calculation
                 EventProduct.objects.create(event=event, product=product, quantity=product_quantity)
+
+            # Save assigned employees
+            employee_ids = request.POST.getlist('employees')
+            assigned_role = request.POST.get('assigned_role', 'Staff')  # Default to 'Staff' role
+            for employee_id in employee_ids:
+                employee = get_object_or_404(Employee, pk=employee_id)
+                EmployeeAssignment.objects.get_or_create(
+                    employee=employee,
+                    event=event,
+                    defaults={'assigned_role': assigned_role}
+                )
+
+            # Save material allocations
+            materials = Material.objects.all()
+            for material in materials:
+                quantity_allocated = int(request.POST.get(f'material_quantity_{material.id}', 0))
+                if quantity_allocated > 0:
+                    EventMaterialAllocation.objects.update_or_create(
+                        event=event,
+                        material=material,
+                        defaults={'quantity_allocated': quantity_allocated}
+                    )
 
             messages.success(request, "Event added successfully!")
             return redirect('events:event_list')
@@ -108,63 +151,84 @@ def add_event(request):
         "Soirée Items": Product.objects.filter(type="soire"),
     }
 
+    # Fetch employees
+    employees = Employee.objects.all()
+
+    # Fetch materials and initialize preselected materials dictionary
+    materials = Material.objects.all()
+    preselected_materials = {}
+
     return render(request, 'events/event_form.html', {
         'form': form,
         'dishes_by_category': dishes_by_category,
-        'products_by_category': products_by_category,  # Pass grouped products to the template
+        'products_by_category': products_by_category,
+        'employees': employees,  # Pass employees to the template
+        'materials': materials,  # Pass materials to the template
+        'preselected_materials': preselected_materials,  # Preselected materials (empty on add)
     })
-
-
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib import messages
-from .forms import EventForm
-from menu.models import Dish
-from products.models import Product, EventProduct
-
 
 def edit_event(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
 
-    if request.method == "POST":
+    if request.method == 'POST':
         form = EventForm(request.POST, instance=event)
         if form.is_valid():
-            event = form.save()
+            # Save updated event details
+            event = form.save(commit=False)
+            event.event_cost = event.calculate_total_price()
+            event.save()
 
             # Update selected dishes
-            selected_dishes_ids = request.POST.getlist("selected_dishes")
+            selected_dishes_ids = request.POST.getlist('selected_dishes')
             selected_dishes = Dish.objects.filter(id__in=selected_dishes_ids)
             event.selected_dishes.set(selected_dishes)
 
-            # Update selected products and quantities
-            selected_products = request.POST.getlist("products")
-            for product_id in selected_products:
-                quantity = request.POST.get(f"quantity_{product_id}", 0)
-                EventProduct.objects.update_or_create(
+            # Update selected products
+            selected_products_ids = request.POST.getlist('products')
+            selected_products = Product.objects.filter(id__in=selected_products_ids)
+            EventProduct.objects.filter(event=event).delete()
+            for product in selected_products:
+                product_quantity = event.number_of_tables * 10
+                EventProduct.objects.create(event=event, product=product, quantity=product_quantity)
+
+            # Update materials allocation
+            materials_ids = request.POST.getlist('materials')
+            EventMaterialAllocation.objects.filter(event=event).delete()  # Clear previous allocations
+            for material_id in materials_ids:
+                quantity_allocated = int(request.POST.get(f'material_quantity_{material_id}', 0))
+                if quantity_allocated > 0:
+                    EventMaterialAllocation.objects.create(
+                        material_id=material_id,
+                        event=event,
+                        quantity_allocated=quantity_allocated,
+                    )
+
+            # Update employee assignments
+            employee_ids = request.POST.getlist('employees')
+            EmployeeAssignment.objects.filter(event=event).delete()  # Clear previous assignments
+            assigned_role = request.POST.get('assigned_role', 'Staff')
+            for employee_id in employee_ids:
+                EmployeeAssignment.objects.get_or_create(
+                    employee_id=employee_id,
                     event=event,
-                    product_id=product_id,
-                    defaults={"quantity": quantity},
+                    defaults={'assigned_role': assigned_role},
                 )
 
-            # Remove products that are no longer selected
-            current_products = EventProduct.objects.filter(event=event)
-            current_products.exclude(product_id__in=selected_products).delete()
-
             messages.success(request, "Event updated successfully!")
-            return redirect("events:event_list")
+            return redirect('events:event_detail', event_id=event.id)
         else:
             messages.error(request, "There was an error updating the event.")
     else:
         form = EventForm(instance=event)
 
-    # Fetch dishes grouped by their type
+    # Prepare context data
     dishes_by_category = {
-        "Starters": Dish.objects.filter(dish_type="starter"),
-        "First Main Dishes": Dish.objects.filter(dish_type="first_main"),
-        "Second Main Dishes": Dish.objects.filter(dish_type="second_main"),
-        "Desserts": Dish.objects.filter(dish_type="dessert"),
+        "Starters": Dish.objects.filter(dish_type='starter'),
+        "First Main Dishes": Dish.objects.filter(dish_type='first_main'),
+        "Second Main Dishes": Dish.objects.filter(dish_type='second_main'),
+        "Desserts": Dish.objects.filter(dish_type='dessert'),
     }
 
-    # Fetch products grouped by their type
     products_by_category = {
         "Sweets": Product.objects.filter(type="sweet"),
         "Salted": Product.objects.filter(type="salted"),
@@ -172,29 +236,31 @@ def edit_event(request, event_id):
         "Soirée Items": Product.objects.filter(type="soire"),
     }
 
-    # Preselected dishes
-    preselected_dishes = list(event.selected_dishes.values_list("id", flat=True))
+    materials = Material.objects.all()
+    employees = Employee.objects.all()
 
-    # Preselected products and their quantities
-    preselected_products = {
-        ep.product_id: ep.quantity
-        for ep in EventProduct.objects.filter(event=event)
+    # Preselect data for the form
+    preselected_dishes = event.selected_dishes.values_list('id', flat=True)
+    preselected_products = EventProduct.objects.filter(event=event).values_list('product_id', flat=True)
+    preselected_materials = {
+        allocation['material_id']: allocation['quantity_allocated']
+        for allocation in EventMaterialAllocation.objects.filter(event=event).values('material_id', 'quantity_allocated')
     }
+    preselected_employees = EmployeeAssignment.objects.filter(event=event).values_list('employee_id', flat=True)
 
-    return render(
-        request,
-        "events/event_form.html",
-        {
-            "form": form,
-            "dishes_by_category": dishes_by_category,
-            "products_by_category": products_by_category,
-            "preselected_dishes": preselected_dishes,
-            "preselected_products": preselected_products,
-        },
-    )
+    return render(request, 'events/event_form.html', {
+        'form': form,
+        'dishes_by_category': dishes_by_category,
+        'products_by_category': products_by_category,
+        'materials': materials,
+        'employees': employees,
+        'event': event,
+        'preselected_dishes': preselected_dishes,
+        'preselected_products': preselected_products,
+        'preselected_materials': preselected_materials,
+        'preselected_employees': preselected_employees,
+    })
 
-
-# Delete Event
 def delete_event(request, pk):
     event = get_object_or_404(Event, pk=pk)
     if request.method == 'POST':
@@ -203,11 +269,9 @@ def delete_event(request, pk):
         return redirect('events:event_list')
     return render(request, 'events/delete_confirmation.html', {'object': event})
 
-# Event Calendar View
 def event_calendar(request):
     return render(request, 'events/event_calendar.html')
 
-# Calendar Events JSON
 def calendar_events(request):
     events = Event.objects.all()
     event_data = [
@@ -220,7 +284,6 @@ def calendar_events(request):
     ]
     return JsonResponse(event_data, safe=False)
 
-# Event Detail
 def event_detail(request, event_id):
     """
     Display detailed information about a specific event, including selected dishes, assignments, materials, and products.
@@ -238,7 +301,6 @@ def event_detail(request, event_id):
         'selected_dishes': selected_dishes,
         'event_products': event_products,  # Include event products in the context
     })
-
 
 def event_pdf(request, event_id):
     """

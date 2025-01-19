@@ -115,6 +115,74 @@
             </tbody>
         </table>
 
+        <!-- Employee Assignments -->
+        <h4>Affectation du STAFF</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Employee</th>
+                    <th>Department</th>
+                    <th>Role</th>
+                    <th>Assign</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ employee.full_name }}</td>
+                    <td>{{ employee.department }}</td>
+                    <td>
+                        <input type="text" 
+                               name="assigned_role_{{ employee.id }}" 
+                               class="form-control" 
+                               placeholder="Role" 
+                               value="{% if employee.id in preselected_employees %}{{ employee.role }}{% endif %}">
+                    </td>
+                    <td>
+                        <input type="checkbox" 
+                               name="employees" 
+                               value="{{ employee.id }}" 
+                               {% if employee.id in preselected_employees %}checked{% endif %}>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h4>Assign Materials</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Material</th>
+                    <th>Quantity Available</th>
+                    <th>Allocate Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for material in materials %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ material.name }}</td>
+                    <td>{{ material.total_quantity }}</td>
+                    <td>
+                        <input type="number" 
+                               name="material_quantity_{{ material.id }}" 
+                               class="form-control" 
+                               value="{{ preselected_materials|get_item:material.id }}">
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center">No materials available.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+
         <!-- Financial Information -->
         <h4>Financial Information</h4>
         <div class="mb-3">

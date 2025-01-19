@@ -7,7 +7,8 @@ from django import forms
 from .models import Event
 from menu.models import Dish
 from products.models import Product
-
+from employees.models import Employee
+from materials.models import Material
 
 class EventForm(forms.ModelForm):
     selected_dishes = forms.ModelMultipleChoiceField(
@@ -22,6 +23,19 @@ class EventForm(forms.ModelForm):
         required=False,
         label="Select Products"
     )
+    assigned_employees = forms.ModelMultipleChoiceField(
+        queryset=Employee.objects.all(),
+        widget=forms.CheckboxSelectMultiple(),
+        required=False,
+        label="Assign Employees"
+    )
+    assigned_materials = forms.ModelMultipleChoiceField(
+        queryset=Material.objects.all(),
+        widget=forms.CheckboxSelectMultiple(),
+        required=False,
+        label="Assign Materials"
+    )
+
 
     class Meta:
         model = Event
@@ -31,7 +45,7 @@ class EventForm(forms.ModelForm):
             'assigned_staff', 'decorations_required',
             'logistics_notes', 'price_per_table', 'number_of_tables',
             'price_of_decoration', 'price_of_extras', 'event_cost', 'amount_paid',
-            'payment_status', 'event_status', 'event_notes', 'selected_dishes', 'products'
+            'payment_status', 'event_status', 'event_notes', 'selected_dishes', 'products','assigned_employees', 'assigned_materials',
         ]
         widgets = {
             'date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
