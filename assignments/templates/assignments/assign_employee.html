@@ -77,7 +77,7 @@
                                 <td>${entry.role}</td>
                                 <td>
                                     <span class="badge ${entry.status === 'Free' ? 'bg-success' : 'bg-danger'}">
-                                        ${entry.status}
+                                        ${entry.status == 'Free' ? 'Libre' : 'Occupé'}
                                     </span>
                                 </td>
                                 <td>${entry.assigned_event || 'N/A'}</td>
