@@ -240,7 +240,6 @@ def event_detail(request, event_id):
     })
 
 
-# Event PDF Generation
 def event_pdf(request, event_id):
     """
     Generate a PDF report for a specific event, including selected dishes, products, client, menu, assignments, and materials.
