@@ -148,3 +148,18 @@ Not Found: /robots.txt
 [19/Jan/2025 21:06:01] "GET /robots.txt HTTP/1.0" 404 3217
 [19/Jan/2025 21:06:01] "GET /events/ HTTP/1.0" 302 0
 [19/Jan/2025 21:06:02] "GET /accounts/login/ HTTP/1.0" 200 4248
+/root/traiteurhamdouni/products/templatetags/custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (templates.E003) 'custom_filters' is used for multiple template tag modules: 'events.templatetags.custom_filters', 'products.templatetags.custom_filters'
+
+System check identified 1 issue (0 silenced).
+January 19, 2025 - 21:17:27
+Django version 4.2.7, using settings 'system_traiteur.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
