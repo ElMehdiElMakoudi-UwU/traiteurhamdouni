@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Dashboard</h2>
+
+    <!-- Metrics -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Events</h5>
+                    <p class="card-text">{{ total_events }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Reservations</h5>
+                    <p class="card-text">{{ total_reservations }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Revenue</h5>
+                    <p class="card-text">${{ total_revenue|floatformat:2 }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Payments</h5>
+                    <p class="card-text">${{ total_pending_payments|floatformat:2 }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events -->
+    <h4>Upcoming Events</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Client</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event in upcoming_events %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ event.name }}</td>
+                <td>{{ event.date }}</td>
+                <td>{{ event.client }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" class="text-center">No upcoming events.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Popular Materials -->
+    <h4>Popular Materials</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Material</th>
+                <th>Total Allocated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for material in popular_materials %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ material.name }}</td>
+                <td>{{ material.total_allocated }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">No materials allocated.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

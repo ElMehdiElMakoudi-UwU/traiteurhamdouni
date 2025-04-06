@@ -7,6 +7,14 @@
     <h2 class="mb-4">Liste des evenements</h2>
     <a href="{% url 'events:add_event' %}" class="btn btn-primary mt-3">Ajouter evenement</a>
 
+     <!-- Search Bar -->
+    <form method="GET" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Rechercher un événement..." value="{{ query }}">
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+        </div>
+    </form>
+
     <table class="table table-striped mt-2">
         <thead class="table-dark">
             <tr>

@@ -3,9 +3,40 @@ from django.contrib import messages
 from .models import Reservation
 from .forms import ReservationForm
 
+from django.db.models.functions import ExtractMonth, ExtractDay
+
 def reservation_list(request):
+    # Get the sorting parameter from the query string (default: ascending by date)
+    sort = request.GET.get('sort', 'asc')
+    toggle_sort = 'desc' if sort == 'asc' else 'asc'  # Determine the toggle direction
+
+    # Get filters for day and month from the query string
+    filter_day = request.GET.get('day')
+    filter_month = request.GET.get('month')
+
+    # Base query for reservations
     reservations = Reservation.objects.all()
-    return render(request, 'reservations/reservation_list.html', {'reservations': reservations})
+
+    # Apply sorting
+    if sort == 'desc':
+        reservations = reservations.order_by('-date')
+    else:
+        reservations = reservations.order_by('date')
+
+    # Apply filters for day and month
+    if filter_day:
+        reservations = reservations.annotate(day=ExtractDay('date')).filter(day=filter_day)
+    if filter_month:
+        reservations = reservations.annotate(month=ExtractMonth('date')).filter(month=filter_month)
+
+    return render(request, 'reservations/reservation_list.html', {
+        'reservations': reservations,
+        'sort': sort,
+        'toggle_sort': toggle_sort,
+        'filter_day': filter_day,  # Pass current day filter to the template
+        'filter_month': filter_month,  # Pass current month filter to the template
+    })
+
 
 def reservation_form(request, reservation_id=None):
     if reservation_id:
@@ -28,9 +59,6 @@ from django.http import JsonResponse
 from .models import Reservation
 
 def reservation_calendar_events(request):
-    """
-    Provide reservation data for the calendar in JSON format.
-    """
     reservations = Reservation.objects.all()
     events = [
         {

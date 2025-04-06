@@ -3,98 +3,32 @@ from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
 from django.template.loader import get_template, render_to_string
 from xhtml2pdf import pisa
-from datetime import datetime
+from datetime import datetime, date
+from django.db.models import Q, Count, Sum, F, ExpressionWrapper, DecimalField
 from .forms import EventForm
-from .models import Event
-from assignments.models import EmployeeAssignment, EventMaterialAllocation
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import EventForm
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import EventForm
-from django.db.models import F
-from menu.models import Dish
-from menu.models import Dish
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import EventForm
-from menu.models import Dish  # Import Dish model
-from django.shortcuts import redirect, render, get_object_or_404
-from django.contrib import messages
-from .forms import EventForm
-from .models import Event, Dish
-from products.models import Product
-from products.models import EventProduct
-from django.shortcuts import render, redirect
-from django.contrib import messages
 from .models import Event, EventProduct
-from .forms import EventForm
-from menu.models import Dish
-from products.models import Product
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib import messages
-from .models import Event, EventProduct
-from .forms import EventForm
-from menu.models import Dish
-from products.models import Product
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib import messages
-from .models import Event, EventProduct
-from .forms import EventForm
-from menu.models import Dish
-from products.models import Product
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib import messages
-from django.http import JsonResponse
-from django.db.models import Q
-from .models import Event, Dish, EventProduct
-from .forms import EventForm
-from products.models import Product
-from materials.models import Material
-from employees.models import Employee
-from assignments.models import EmployeeAssignment, EventMaterialAllocation  # Correct import
-from assignments.models import EmployeeAssignment
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib import messages
-from .forms import EventForm
 from menu.models import Dish
 from products.models import Product, EventProduct
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib import messages
-from .models import Event, EventProduct
-from menu.models import Dish
-from products.models import Product
 from materials.models import Material
-from assignments.models import EmployeeAssignment, EventMaterialAllocation
-from .forms import EventForm
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib import messages
-from .models import Event
-from .forms import EventForm
-from menu.models import Dish
-from products.models import Product
-from materials.models import Material
-from assignments.models import EmployeeAssignment, EventMaterialAllocation
 from employees.models import Employee
+from assignments.models import EmployeeAssignment, EventMaterialAllocation
+from reservation.models import Reservation
+
+
 from django.db.models import Q
 
-from django.shortcuts import render
-from .models import Event
-
 def event_list(request):
-    # Get the sort parameter from the request
-    sort_by = request.GET.get('sort_by', 'date')  # Default sorting by date
-    sort_order = request.GET.get('order', 'asc')  # Default order is ascending
+    query = request.GET.get('q', '')  # Get search query from the request
+    events = Event.objects.all()
 
-    # Add a '-' prefix for descending order
-    if sort_order == 'desc':
-        sort_by = f'-{sort_by}'
+    if query:
+        events = events.filter(
+            Q(name__icontains=query) |  # Search by event name
+            Q(event_type__icontains=query) |  # Search by event type
+            Q(client__full_name__icontains=query)  # Correct field name for Customer
+        )
 
-    # Fetch and sort events
-    events = Event.objects.all().order_by(sort_by)
-
-    return render(request, 'events/event_list.html', {'events': events, 'sort_by': sort_by, 'sort_order': sort_order})
+    return render(request, 'events/event_list.html', {'events': events, 'query': query})
 
 def add_event(request):
     if request.method == 'POST':
@@ -343,3 +277,41 @@ def event_pdf(request, event_id):
     if pisa_status.err:
         return HttpResponse('We had some errors <pre>' + html + '</pre>')
     return response
+
+def dashboard(request):
+    # Metrics
+    total_events = Event.objects.count()
+    total_reservations = Reservation.objects.count()
+    total_revenue = Reservation.objects.aggregate(total=Sum('total_amount'))['total'] or 0
+
+    # Calculate pending payments dynamically
+    reservations_with_pending = Reservation.objects.annotate(
+        remaining_amount=ExpressionWrapper(
+            F('total_amount') - F('advance_amount'),
+            output_field=DecimalField(max_digits=10, decimal_places=2)
+        )
+    )
+    total_pending_payments = reservations_with_pending.aggregate(
+        pending=Sum('remaining_amount')
+    )['pending'] or 0
+
+    total_employees_assigned = EmployeeAssignment.objects.values('employee').distinct().count()
+
+    # Upcoming Events
+    upcoming_events = Event.objects.filter(date__gte=date.today()).order_by('date')[:5]
+
+    # Popular Materials
+    popular_materials = Material.objects.annotate(
+        total_allocated=Sum('allocations__quantity_allocated')
+    ).order_by('-total_allocated')[:5]
+
+    context = {
+        'total_events': total_events,
+        'total_reservations': total_reservations,
+        'total_revenue': total_revenue,
+        'total_pending_payments': total_pending_payments,
+        'total_employees_assigned': total_employees_assigned,
+        'upcoming_events': upcoming_events,
+        'popular_materials': popular_materials,
+    }
+    return render(request, 'events/dashboard.html', context)
