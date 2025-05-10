@@ -26,11 +26,12 @@ SECRET_KEY = 'django-insecure-1f0)!l4$p*@dv!2(n-5txmyt^s7uwfjvxfvnf%@-s$okqo2&xu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['traiteurhamdouni.com', 'www.traiteurhamdouni.com', '46.202.173.81', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['traiteurhamdouni.com', 'www.traiteurhamdouni.com', '146.59.230.241', 'localhost', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://46.202.173.81',
-    'https://46.202.173.81',
+    'http://146.59.230.241',
+    'https://146.59.230.241',
+    'http://146.59.230.241:8008',
 ]
 
 # Application definition

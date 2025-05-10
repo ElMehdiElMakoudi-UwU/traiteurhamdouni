@@ -1,8 +1,9 @@
 run:
-	- python3 manage.py runserver 0.0.0.0:8000
+	- python3 manage.py runserver 0.0.0.0:8007
 kill: 
-	- pkill -f "python3 manage.py runserver"
+	- pkill -f "gunicorn --workers 3 --bind 127.0.0.1:8007 system_traiteur.wsgi:application"
 always:
-	- nohup python3 manage.py runserver 0.0.0.0:8000 > output.log 2>&1 &
+	- nohup gunicorn --workers 3 --bind 127.0.0.1:8007 system_traiteur.wsgi:application > output.log 2>&1 &
+
 venv:
 	- source venv/bin/activate
